@@ -1,0 +1,55 @@
+<!-- Search bar, require: search params -->
+<view class="search">
+<van-search background="#5744CC" shape="round" value="{{ value }}" placeholder="E.g DJ SET" />
+</view>
+
+<!-- map api, require: service latitudes &  -->
+<view class="map" style="background-image: url(https://images2015.cnblogs.com/blog/1149975/201706/1149975-20170615165945103-1811100363.png);">
+ </view>
+
+<!-- Swiping bar, require: catagory search params -->
+ <van-tabs color="#5744CC" bind:click="onClick" active="{{ active }}">
+  <van-tab title="Cooking"></van-tab>
+  <van-tab title="Art"></van-tab>
+  <van-tab title="Tech"></van-tab>
+  <van-tab title="Driving"></van-tab>
+  <van-tab title="DIY"></van-tab>
+</van-tabs>
+
+<!-- show: list, require: service_id(params) from filters, then do loop on card-product(params: service.name & service.item.name) -->
+<view class="card-product">
+  <view class="card-product-infos">
+    <h2>DJ Big Cat</h2>
+    <p>Test out my YK DJ speakers</p>
+  </view>
+    <image src="https://images.unsplash.com/photo-1526979118433-63c7344f06f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80.png" />
+</view>
+<view class="card-product">
+  <view class="card-product-infos">
+    <h2>Dennon DJ Set</h2>
+    <p>Test out the Denon DJ Set</p>
+  </view>
+    <image src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+</view>
+
+<view class="card-product">
+  <view class="card-product-infos">
+    <h2>Technique Turntable</h2>
+    <p>Test out classic Techinique  
+1200 turntables</p>
+  </view>
+    <image mode="aspectFit" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+</view>
+
+<view class="card-product">
+  <view class="card-product-infos">
+    <h2>Neumark Mixer</h2>
+    <p>Test out the new Neumark 
+mixer</p>
+  </view>
+    <image src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+</view>
+
+
+
+

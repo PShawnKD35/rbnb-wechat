@@ -1,0 +1,23 @@
+<!--pages/home/home.wxml-->
+<view class="search">
+<van-search background="#5744CC" shape="round" value="{{ value }}" placeholder="请输入搜索关键词" />
+</view>
+
+<view class="map" style="background-image: url(https://images2015.cnblogs.com/blog/1149975/201706/1149975-20170615165945103-1811100363.png);">
+ </view>
+
+<van-tabs color="#5744CC" bind:click="onClick" active="{{ active }}">
+  <van-tab title="Cooking"></van-tab>
+  <van-tab title="Art"></van-tab>
+  <van-tab title="Tech"></van-tab>
+  <van-tab title="Driving"></van-tab>
+  <van-tab title="DIY"></van-tab>
+</van-tabs>
+
+
+
+
+
+
+
+

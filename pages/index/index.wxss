@@ -9,13 +9,15 @@
   width: 128rpx;
   height: 128rpx;
   margin: 20rpx;
-  border-radius: 50%;
+  border-radius: 80%;
 }
 
 .userinfo-nickname {
-  color: #aaa;
+  color:grey;
+
 }
 
 .usermotto {
-  margin-top: 200px;
+  margin-top: 100px;
+  font-size: 40rpx;
 }

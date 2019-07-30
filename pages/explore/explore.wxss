@@ -1,0 +1,67 @@
+/* pages/explore/explore.wxss */
+.search {
+  border-radius: 20px;
+}
+
+.map {
+  background-size: fill;
+  background-position: center;
+  margin: 30 5 5 5rpx;
+  padding: 150px 0;
+  height:10px;
+  width: auto;
+  border-radius:10rpx;
+}
+
+.tags {
+  text-align: center;
+  margin:10px;
+  padding:10rpx;
+}
+
+.card-product {
+  margin-top:20px;
+  overflow: hidden;
+  height: 150px;
+  background: white;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+.card-product-infos{
+  flex: 60%;
+}
+.image{
+  flex: 40%;
+  padding: 20px;
+
+}
+.card-product img {
+  height: 80%;
+  width: 150px;
+ 
+  /* object-fit: fill; */
+  border-radius: 50rpx;
+}
+
+.card-product h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 10rpx;
+  margin:20px;
+  display: flex;
+flex-direction: column;
+
+}

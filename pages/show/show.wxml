@@ -1,0 +1,89 @@
+<!-- Search bar -->
+<view class="background">
+<view class="search">
+<van-search background="#5744CC" shape="round" value="{{ value }}" placeholder="E.g DJ SET" />
+</view>
+
+<view class="image" style="background-image: url(https://images.unsplash.com/photo-1522258079018-a20492fa3b7b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80.png);">
+ </view>
+</view>
+
+ <view class="purple"></view>
+
+<!-- service: title of the service -->
+ <view class="white">
+ <view class="title">Pioneer DJ Controller, 
+Black (DDJ-SB3)</view>
+
+ </view>
+
+<!-- Service: User-name, User-credit.rate % -->
+<view class="card-product">
+  <view class="card-product-infos">
+    <h2>DJ Big CAT</h2>
+    <p>Credit rate 10%</p>
+  </view>
+  <image class="avatar-bordered" alt="avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/sarahlafer" />
+</view>
+
+<!-- Service: Description, experience-->
+<view class="description">
+      <view class="description-block">
+    <text class="h3">Description\n</text>
+      </view>
+      <view class="description-block">
+    <text class="h4">Greetings all I am DJ Big Cat\n</text>
+      </view>
+    <text class="p">I have been DJ’ing  hip-hop and Drum ‘n Bass around Brooklyn since the early 2000s.
+    I am willing to give lessons to anyone who would like to learn DJing.  
+    </text>
+</view>
+
+<!-- Service.item: item.name, item.description -->
+<view class="description">
+      <view class="description-block">
+    <text class="h3">Item Description\n</text>
+      </view>
+      <view class="description-block">
+    <text class="h4">Pioneer DDJ-SB3 DJ Controller (Black)</text>
+      </view>
+</view>
+
+<view class="description">
+      <view class="description-block">
+    <text class="h3">Available Slots\n</text>
+      </view>
+      <van-datetime-picker
+  type="date"
+  value="{{ currentDate }}"
+  bind:input="onInput"
+  min-date="{{ minDate }}"
+  formatter="{{ formatter }}"
+/>  
+</view>
+
+<!-- Service: Available.timeslot(buttons) -->
+<view class="time-button">
+    <view class="times-tab" wx:for="{{times}}" wx:for-item="time">
+    <!-- <van-button size="small" plain type="info">{{time}}   </van-button> -->
+    <view class="page__bd page__bd_spacing">
+    <wux-button block type="royal">{{time}}</wux-button>
+    </view>
+    </view>
+</view>
+
+<!-- <view class="time-button">
+        <wux-grids>
+        <view class="times-tab" wx:for="{{times}}" wx:for-item="time">
+            <wux-grid style="royal">
+                <view>{{time}}</view>
+            </wux-grid>
+             </view>
+        </wux-grids>
+        </view> -->
+
+<!-- Booking: booking confirmation submition button -->
+<view class="confirm">
+ <wux-button block outline type="royal">Confrim</wux-button>
+</view>
+

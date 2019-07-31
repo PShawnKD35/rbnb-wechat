@@ -7,7 +7,11 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto">
+  <!-- <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
-  </view>
+    <text class="user-motto">{{mottoSide}}</text>
+  </view> -->
+
+  <view>Hello world</view>
+
 </view>

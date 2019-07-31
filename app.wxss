@@ -2,9 +2,11 @@
 .container {
   height: 100%;
   display: flex;
+  /* background: linear-gradient(180deg, #5744CC 0%, #928CE7 56.77%, rgba(115, 11, 73, 0) 97.92%); */
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
+  font-family: Darker Grotesqu;
 } 

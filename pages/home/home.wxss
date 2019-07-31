@@ -1,0 +1,23 @@
+/* pages/home/home.wxss */
+.map {
+  background-size: fill;
+  background-position: center;
+  margin: 30 5 5 5rpx;
+  padding: 150px 0;
+  height:35vh;
+  border-radius:10rpx;
+}
+
+.search {
+  border-radius: 20px;
+}
+
+.tags {
+  text-align: center;
+  margin:10px;
+  padding:10rpx;
+}
+
+
+
+

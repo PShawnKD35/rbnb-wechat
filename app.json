@@ -1,13 +1,49 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/landing/landing",
+    "pages/home/home",
+    "pages/explore/explore",
+    "pages/show/show",
+    "pages/booking/booking"
+
+  
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#5744CC",
+    "navigationBarTitleText": "试乎",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "white",
+    "borderStyle": "black",
+    "selectedColor": "#5744CC",
+    "color": "#white",
+    "list": [
+      
+      {
+        "pagePath": "pages/explore/explore",
+        "text": "Explore",
+        "iconPath": "/images/compass.png",
+        "selectedIconPath": "/images/compass-2.png"
+      },
+      {
+        "pagePath": "pages/booking/booking",
+        "text": "Booking",
+        "iconPath": "/images/open-book-2.png",
+        "selectedIconPath": "/images/open-book.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "My Profile",
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/home-2.png"
+      }
+      
+
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }

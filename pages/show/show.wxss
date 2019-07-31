@@ -1,0 +1,174 @@
+/* pages/show/show.wxss */
+@import '/dist2/styles/index.wxss';
+.search {
+  border-radius: 20px;
+}
+
+.image{
+  background-size: fill;
+  background-position: center;
+  margin: 30 5 5 5rpx;
+  padding: 15px 0;
+  height: 300rpx;
+  width: auto;
+
+}
+
+.background {
+  /* position: fixed; */
+  width: 100%;
+  z-index: 2;
+}
+
+/* #rectangle{
+    width:100vw;
+    /* height:30px; */
+    /* height:100vh;
+    background:#5744CC;
+    z-index: 1;
+} */
+/* 
+#white-content {
+  width:100vw;
+    height:100vh;
+    background:white;
+    border-radius: 30px;
+    top:260px;
+    z-index: 1; */
+    /* position:absolute; */
+      /* position:absolute;
+
+} */ 
+
+.title{
+padding:20px;
+font-size: 26px;
+text-align: center;
+color: grey;
+z-index: 1;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.purple {
+  background-color:#5744CC;
+  height: 100px;
+  position:relative;
+}
+
+.white {
+border-radius: 20px;
+position: relative;
+height: 100px;
+margin-top: -80px;
+background-color: white;
+}
+
+.avatar-bordered {
+  width: 50px;
+  height:50px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: end;
+}
+
+.card-product {
+  margin:10px;
+  overflow: hidden;
+  height: 100px;
+  background: white;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+.card-product-infos{
+  flex: 60%;
+}
+.image{
+  flex: 40%;
+  padding: 20px;
+  /* margin:20px; */
+
+}
+
+.card-product h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  text-align: right;
+}
+
+.card-product p {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+   text-align: right;
+}
+
+.card-product .card-product-infos {
+  padding: 10rpx;
+  margin:20px;
+  display: flex;
+flex-direction: column;
+
+}
+
+.description{
+  display: block;
+  margin:20px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+
+}
+
+.description .description-block{
+  margin-bottom: 20px;
+}
+
+.description .h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color:#5744CC;
+
+}
+.description .h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.description .p {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-top: 8px;
+  text-align: right;
+}
+
+.time-button {
+  margin:15px;
+  display: flex;
+flex-wrap: wrap;
+
+
+}
+ .times-tab{
+  overflow: unset;
+margin:3px;
+  flex: 20%;
+  border-radius: 10px;
+ } 
+/* 
+.times-tab active{
+  overflow: unset;
+  
+  padding:5px;
+  flex: 30%;
+  /* background-color: blue; */
+/* } */ 
+
+.confirm {
+  margin:15px;
+  margin-bottom: 30px;
+}

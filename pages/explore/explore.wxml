@@ -1,0 +1,72 @@
+<!-- Search bar, require: search params -->
+<view class="search">
+<van-search background="#5744CC" shape="round" value="{{ value }}" placeholder="E.g DJ SET" />
+</view>
+
+<!-- map api, require: service latitudes &  -->
+<!-- <view class="map" style="background-image: url(https://images2015.cnblogs.com/blog/1149975/201706/1149975-20170615165945103-1811100363.png);"> -->
+
+
+<!-- Swiping bar, require: catagory search params -->
+ <van-tabs color="#5744CC" bind:click="onClick" active="{{ active }}">
+  <van-tab title="Cooking"></van-tab>
+  <van-tab title="Art"></van-tab>
+  <van-tab title="Tech"></van-tab>
+  <van-tab title="Driving"></van-tab>
+  <van-tab title="DIY"></van-tab>
+</van-tabs>
+
+<!-- show: list, require: service_id(params) from filters, then do loop on card-product(params: service.name & service.item.name) -->
+<view class="card-product">
+  <view class="card-product-infos">
+    <h2>DJ Big Cat</h2>
+    <p>Test out my YK DJ speakers</p>
+    <van-rate size="15"
+  value="3"
+  count="5"
+  bind:change="onChange"/>
+  </view>
+    <image src="/images/ebat5.jpg" mode="aspectFit">  
+    </image> 
+</view>
+<view class="card-product">
+  <view class="card-product-infos">
+    <h2>Dennon DJ Set</h2>
+    <p>Test out the Denon DJ Set</p>
+     <van-rate size="15"
+  value="1"
+  count="5"
+  bind:change="onChange"/>
+  </view>
+   <image src="/images/ebay1.jpg" mode="aspectFit"> </image> 
+</view>
+
+<view class="card-product">
+  <view class="card-product-infos">
+    <h2>Technique Turntable</h2>
+    <p>Test out classic Techinique  
+1200 turntables</p>
+ <van-rate size="15"
+  value="4"
+  count="5"
+  bind:change="onChange"/>
+  </view>
+  <image src="/images/ebay2.jpg" mode="aspectFit">  </image>
+</view>
+
+<view class="card-product">
+  <view class="card-product-infos">
+    <h2>Neumark Mixer</h2>
+    <p>Test out the new Neumark 
+mixer</p>
+ <van-rate size="15"
+  value="2"
+  count="5"
+  bind:change="onChange"/>
+  </view>
+   <image src="/images/ebay3.jpg" mode="aspectFit"> </image>
+</view>
+
+
+
+

@@ -1,4 +1,4 @@
-// pages/booking/booking.js
+// pages/confirmation/confirmation.js
 Page({
 
   /**
@@ -62,6 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
+  }
 })

@@ -1,0 +1,139 @@
+.purple-background {
+  min-height: 100vh;
+  width: 100%;
+  background: #8E88E6;
+  box-sizing: border-box;
+  z-index: -34;
+}
+.profile {
+  font-family:Open Sans;
+  font-style:normal;
+  font-weight:normal;
+  font-size:20px;
+  line-height:27px;
+  color:#FFFFFF;
+}
+.detail-box{
+margin-top: 40px;
+}
+.h3 {
+  position: relative;
+  margin:40px;
+  color:white;
+  font-size: 16px;
+  font-weight: bold;
+}
+.profile-photo {
+position: relative;
+width: 99px;
+height: 99px;
+/* left: 20px;
+top: 30px; */
+border-radius: 100%;
+background-color: green;
+z-index: -1;
+}
+.white-box {
+margin: 0 0.8em;
+box-sizing: border-box;
+padding: 2em;
+background:#FFFFFF;
+box-shadow:0px 4px 4px rgba(162, 157, 157, 0.25);
+border-radius:20px;
+z-index: 1;
+}
+.title-font{
+  font-weight: bold;
+  font-size: 50rpx;
+  color: #5744CC;
+}
+.font{
+  color: #5744CC;
+  font-weight: bold;
+  font-size: 22px;
+}
+.small-text{
+  color: grey;
+  font-size: 14;
+}
+/* .circle {
+text-align: center;
+width: 58px;
+height: 58px;
+left: 159px;
+top: 20px;
+background: #928CE7;
+border-radius: 100%;
+} */
+.form-fields-top {
+  margin-top: 150px;
+  height: 60px;
+  border: solid black 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-center;
+}
+.box-1 {
+  border: solid red 3px;
+  height: 30px;
+  width: 150px;
+  margin-left: 3px;
+}
+.box-2 {
+  margin-right: 5px;
+  border: solid red 3px;
+  height: 54px;
+  width: 150px;
+  
+}
+.form-fields-middle {
+  height: 100px;
+  border: solid #000000 3px;
+}
+.box-3 {
+  margin-top: 10px;
+  border: solid red 3px;
+  height: 80px;
+  width: 340px;
+  margin-left: 3px;
+}
+.form-fields-bottom{
+  height: 100px;
+  border: solid #000000 3px;
+  display: flex;
+  justify-content: flex-end;
+  justify-content: space-between;
+}
+.box-4{
+  border: solid red 3px;
+  height: 60px;
+  width: 150px;
+  margin-left: 3px;
+}
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+  height: 20px;
+  margin-right: 5px;
+}
+.line {
+text-align: center;
+position: absolute;
+width: 277px;
+height: 0px;
+left: 54px;
+top: 130px;
+border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.flex {
+  display: flex;
+}
+.items-center{
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}

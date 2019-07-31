@@ -12,17 +12,15 @@
 
 <!-- service: title of the service -->
  <view class="white">
- <view class="title">Pioneer DJ Controller, 
-Black (DDJ-SB3)</view>
+ <view class="title">{{story.name}}</view>
 
  </view>
 
 <!-- Service: User-name, User-credit.rate % -->
 <view class="card-product">
   <view class="card-product-infos">
-    <h2>DJ Big CAT</h2>
-    <p>Credit rate 10%</p>
-
+    <h2>{{item.name}}</h2>
+    <p>{{story.description}}</p>
   </view>
   <image class="avatar-bordered" alt="avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/sarahlafer" />
 </view>
@@ -85,6 +83,6 @@ Black (DDJ-SB3)</view>
 
 <!-- Booking: booking confirmation submition button -->
 <view class="confirm">
- <wux-button block outline type="royal">Confrim</wux-button>
+ <wux-button block outline type="royal" bindtap="goToConfirm" >Confrim</wux-button>
 </view>
 

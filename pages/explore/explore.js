@@ -19,7 +19,7 @@ Page({
     // Items and services
     wx.request({
 
-      url: "http://localhost:3000/api/v1/services",
+      url: "http://dragonbnb.herokuapp.com/api/v1/services",
       method: 'GET',
       success(res) {
         // get from json key (services:)

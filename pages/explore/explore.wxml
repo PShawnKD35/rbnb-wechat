@@ -1,7 +1,7 @@
 <!-- Search bar, require: search params -->
 <view class="purple-container">
 <view class="search">
-<van-search background="#5744CC" shape="round" value="{{ value }}" placeholder="E.g DJ SET" />
+<van-search background="#5744CC" shape="round" value="{{ searchKeyWord }}" placeholder="E.g DJ SET" />
 </view>
 
 <!-- map api, require: service latitudes &  -->

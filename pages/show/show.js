@@ -32,7 +32,7 @@ Page({
     let page = this
     this.setData({ UserInfo: getApp().globalData.userInfo })
     wx.request({
-      url: `http://localhost:3000/api/v1/services/${options.id}`,
+      url: `http://dragonbnb.herokuapp.com/api/v1/services/${options.id}`,
       method: 'GET',
       success(res) {
         console.log(res)

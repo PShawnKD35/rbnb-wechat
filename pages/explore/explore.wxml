@@ -4,8 +4,8 @@
 </view>
 
 <!-- map api, require: service latitudes &  -->
-<view class="map" style="background-image: url(https://images2015.cnblogs.com/blog/1149975/201706/1149975-20170615165945103-1811100363.png);">
- </view>
+<!-- <view class="map" style="background-image: url(https://images2015.cnblogs.com/blog/1149975/201706/1149975-20170615165945103-1811100363.png);"> -->
+
 
 <!-- Swiping bar, require: catagory search params -->
  <van-tabs color="#5744CC" bind:click="onClick" active="{{ active }}">
@@ -21,15 +21,24 @@
   <view class="card-product-infos">
     <h2>DJ Big Cat</h2>
     <p>Test out my YK DJ speakers</p>
+    <van-rate size="15"
+  value="3"
+  count="5"
+  bind:change="onChange"/>
   </view>
-    <image src="https://images.unsplash.com/photo-1526979118433-63c7344f06f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80.png" />
+    <image src="/images/ebat5.jpg" mode="aspectFit">  
+    </image> 
 </view>
 <view class="card-product">
   <view class="card-product-infos">
     <h2>Dennon DJ Set</h2>
     <p>Test out the Denon DJ Set</p>
+     <van-rate size="15"
+  value="1"
+  count="5"
+  bind:change="onChange"/>
   </view>
-    <image src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+   <image src="/images/ebay1.jpg" mode="aspectFit"> </image> 
 </view>
 
 <view class="card-product">
@@ -37,8 +46,12 @@
     <h2>Technique Turntable</h2>
     <p>Test out classic Techinique  
 1200 turntables</p>
+ <van-rate size="15"
+  value="4"
+  count="5"
+  bind:change="onChange"/>
   </view>
-    <image mode="aspectFit" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <image src="/images/ebay2.jpg" mode="aspectFit">  </image>
 </view>
 
 <view class="card-product">
@@ -46,8 +59,12 @@
     <h2>Neumark Mixer</h2>
     <p>Test out the new Neumark 
 mixer</p>
+ <van-rate size="15"
+  value="2"
+  count="5"
+  bind:change="onChange"/>
   </view>
-    <image src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+   <image src="/images/ebay3.jpg" mode="aspectFit"> </image>
 </view>
 
 

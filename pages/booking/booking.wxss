@@ -1,0 +1,42 @@
+/* ​
+.mid-box{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+}
+​
+.upcoming {
+  border: 1px solid yellow;
+}
+​
+.small-box{
+    margin-top: 10px;
+    border: 1px solid blue;
+    height: 80px;
+    display: flex;
+    justify-items: space-inbetween;
+    align-content: center;
+​
+}
+
+.box1{
+  width: 60px;
+  height: 80px;
+}
+​
+.box2{
+  border: 1px solid red;
+  width: 120px;
+  height: 80px;
+  padding-left: 15px;
+}
+​
+.profile-photo {
+margin: 20px;
+width: 99px;
+height: 98px;
+border-radius: 100px;
+border: 1px solid red;
+}
+​ */

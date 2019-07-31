@@ -5,7 +5,9 @@
     "pages/landing/landing",
     "pages/home/home",
     "pages/explore/explore",
-    "pages/show/show"
+    "pages/show/show",
+    "pages/booking/booking"
+
   
   ],
   "window": {
@@ -15,19 +17,32 @@
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
+    "backgroundColor": "white",
+    "borderStyle": "black",
+    "selectedColor": "#5744CC",
+    "color": "#white",
     "list": [
-      {
-        "pagePath": "pages/home/home",
-        "text": "My Profile",
-        "iconPath": "/images/zhuye.png",
-        "selectedIconPath": "/images/zhuye.png"
-      },
+      
       {
         "pagePath": "pages/explore/explore",
         "text": "Explore",
-        "iconPath": "/images/zhuye.png",
-        "selectedIconPath": "/images/zhuye.png"
+        "iconPath": "/images/compass.png",
+        "selectedIconPath": "/images/compass-2.png"
+      },
+      {
+        "pagePath": "pages/booking/booking",
+        "text": "Booking",
+        "iconPath": "/images/open-book-2.png",
+        "selectedIconPath": "/images/open-book.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "My Profile",
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/home-2.png"
       }
+      
+
     ]
   },
   "sitemapLocation": "sitemap.json"

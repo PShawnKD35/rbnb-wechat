@@ -1,4 +1,6 @@
 /**index.wxss**/
+@import "/dist2/styles/index.wxss";
+
 .userinfo {
   display: flex;
   flex-direction: column;

@@ -1,0 +1,11 @@
+<!--pages/booking/booking.wxml-->
+<!--pages/booking/booking.wxml-->
+<view class="purple-background"></view>
+<view class="mid-box">
+<view class="upcoming">Hello</view>
+<view class="small-box">
+<view class="box1">Hello</view>
+<view class="box2">Hello</view>
+</view>
+<view class="profile-photo"></view>
+</view>

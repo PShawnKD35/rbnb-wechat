@@ -22,7 +22,7 @@
 .card-product {
   margin-top:20px;
   overflow: hidden;
-  height: 150px;
+  height: 140px;
   background: white;
   display: flex;
   align-items: center;
@@ -31,17 +31,13 @@
 .card-product-infos{
   flex: 60%;
 }
-.image{
+.card-product .image{
   flex: 40%;
   padding: 20px;
+  width: 1170px;
+  height: 80px;
+  border-radius: 20px;
 
-}
-.card-product img {
-  height: 80%;
-  width: 150px;
- 
-  /* object-fit: fill; */
-  border-radius: 50rpx;
 }
 
 .card-product h2 {

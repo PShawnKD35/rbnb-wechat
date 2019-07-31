@@ -11,4 +11,7 @@
     <text class="user-motto">{{motto}}</text>
     <text class="user-motto">{{mottoSide}}</text>
   </view> -->
+
+  <view>Hello world</view>
+
 </view>

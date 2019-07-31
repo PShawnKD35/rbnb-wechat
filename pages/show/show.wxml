@@ -22,6 +22,7 @@ Black (DDJ-SB3)</view>
   <view class="card-product-infos">
     <h2>DJ Big CAT</h2>
     <p>Credit rate 10%</p>
+
   </view>
   <image class="avatar-bordered" alt="avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/sarahlafer" />
 </view>
@@ -63,10 +64,27 @@ Black (DDJ-SB3)</view>
 </view>
 
 <!-- Service: Available.timeslot(buttons) -->
-  <view class="time-button">
-<view class="times-tab" wx:for="{{times}}" wx:for-item="time">
- <van-button plain hairline type="time">{{time}}</van-button>
- </view>
+<view class="time-button">
+    <view class="times-tab" wx:for="{{times}}" wx:for-item="time">
+    <!-- <van-button size="small" plain type="info">{{time}}   </van-button> -->
+    <view class="page__bd page__bd_spacing">
+    <wux-button block type="royal">{{time}}</wux-button>
+    </view>
+    </view>
 </view>
 
+<!-- <view class="time-button">
+        <wux-grids>
+        <view class="times-tab" wx:for="{{times}}" wx:for-item="time">
+            <wux-grid style="royal">
+                <view>{{time}}</view>
+            </wux-grid>
+             </view>
+        </wux-grids>
+        </view> -->
+
 <!-- Booking: booking confirmation submition button -->
+<view class="confirm">
+ <wux-button block outline type="royal">Confrim</wux-button>
+</view>
+

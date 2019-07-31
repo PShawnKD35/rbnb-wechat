@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "van-button": "/dist/button/index"
+    "van-button": "/dist1/button/index",
+    "wux-button": "/dist2/button/index"
   }
 }

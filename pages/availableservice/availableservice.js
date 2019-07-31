@@ -1,4 +1,4 @@
-// pages/landing/landing.js
+// pages/availableservice/availableservice.js
 Page({
 
   /**
@@ -18,7 +18,9 @@ Page({
   /**
    * Lifecycle function--Called when page is initially rendered
    */
+  onReady: function () {
 
+  },
 
   /**
    * Lifecycle function--Called when page show

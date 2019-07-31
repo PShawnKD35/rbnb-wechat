@@ -14,14 +14,15 @@ App({
             code: res.code
           },
           success: (res) => {
-            this.globalData.userId = res.data.userId
             console.log(res.data.userId)
+
+            this.globalData.openid = res.data.userId
           }
         })
       }
     })
   },
   globalData: {
-    userInfo: null
+    userInfo : null
   }
 })

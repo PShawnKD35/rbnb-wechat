@@ -6,7 +6,9 @@
     "pages/explore/explore",
     "pages/show/show",
     "pages/booking/booking",
-    "pages/confirmation/confirmation"
+    "pages/confirmation/confirmation",
+    "pages/availableservice/availableservice",
+    "pages/profile/profile"
 
   
   ],

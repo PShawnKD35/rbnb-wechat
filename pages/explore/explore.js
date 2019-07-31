@@ -24,7 +24,6 @@ Page({
       success(res) {
         // get from json key (services:)
         const services = res.data
-        console.log(res.data)
         page.setData({
           services: services,
 
@@ -44,59 +43,28 @@ Page({
       }
     })
   },
-
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
-
-  },
+  
   goToService: function (event) {
     let id = event.currentTarget.dataset.id
     wx.navigateTo({
       url: `/pages/show/show?id=${id}`,
+    })
+  },
+
+// not fetching data after search
+  onSearch: function (event) {
+    let page = this
+    let searchKeyword = console.log(event.detail)
+    wx.request({
+      url: `https://dragonbnb.herokuapp.com/api/v1/services/search?item_name=${searchKeyword}`,
+      method: 'GET',
+      success(res){
+        console.log(res)
+        const services = res.data
+        page.setData({
+          services: services
+        })
+      }
     })
   }
 })

@@ -5,23 +5,26 @@ Page({
    * Page initial data
    */
   data: {
+    bookingDate: '',
     times: ["9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00","17:00","18:00"],
 
     currentDate: new Date().getTime(),
     minDate: new Date().getTime(),
+    maxDate: new Date().getTime() + 13410355483,
     formatter(type, value) {
       if (type === 'year') {
-        return `${value}年`;
+        return `${value}`;
       } else if (type === 'month') {
-        return `${value}月`;
+        return `${value}`;
       }
       return value;
     }
   },
 
   onInput(event) {
+    console.log(event.detail)
     this.setData({
-      currentDate: event.detail
+      bookingDate: event.detail
     });
   },
 
@@ -37,7 +40,7 @@ Page({
       success(res) {
         console.log(res)
         page.setData({
-        story: res.data.service,
+        service: res.data.service,
         item: res.data.service.items[0]});
         wx.hideToast();
       }
@@ -55,41 +58,6 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
 
   },
   goToConfirm: function () {

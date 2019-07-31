@@ -19,8 +19,8 @@
 <!-- Service: User-name, User-credit.rate % -->
 <view class="card-product">
   <view class="card-product-infos">
-    <h2>{{item.name}}</h2>
-    <p>{{story.description}}</p>
+    <h2>{{service.user.name}}</h2>
+    <p>{{service.user.description}}</p>
   </view>
   <image class="avatar-bordered" alt="avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/sarahlafer" />
 </view>
@@ -31,58 +31,54 @@
     <text class="h3">Description\n</text>
       </view>
       <view class="description-block">
-    <text class="h4">Greetings all I am DJ Big Cat\n</text>
+    <text class="h4">{{service.name}}\n</text>
       </view>
-    <text class="p">I have been DJ’ing  hip-hop and Drum ‘n Bass around Brooklyn since the early 2000s.
-    I am willing to give lessons to anyone who would like to learn DJing.  
+    <text class="p">{{service.description}}
     </text>
 </view>
 
 <!-- Service.item: item.name, item.description -->
 <view class="description">
       <view class="description-block">
-    <text class="h3">Item Description\n</text>
+    <text class="h3">{{item.name}}\n</text>
       </view>
       <view class="description-block">
-    <text class="h4">Pioneer DDJ-SB3 DJ Controller (Black)</text>
+    <text class="h4">{{item.description}} (Black)</text>
       </view>
-</view>
 
-<view class="description">
-      <view class="description-block">
-    <text class="h3">Available Slots\n</text>
-      </view>
       <van-datetime-picker
-  type="date"
-  value="{{ currentDate }}"
-  bind:input="onInput"
-  min-date="{{ minDate }}"
-  formatter="{{ formatter }}"
-/>  
-</view>
+        title="Choose Date"
+        type="date"
+        value="{{ currentDate }}"
+        bind:input="onInput"
+        min-date="{{ minDate }}"
+        formatter="{{ formatter }}"
+        cancel-button-text="Cancel"
+        confirm-button-text="Confirm"
+        item-height="35"
+        visible-item-count="3"
+        max-date="{{ maxDate }}"
+      />  
+
 
 <!-- Service: Available.timeslot(buttons) -->
-<view class="time-button">
-    <view class="times-tab" wx:for="{{times}}" wx:for-item="time">
-    <!-- <van-button size="small" plain type="info">{{time}}   </van-button> -->
-    <view class="page__bd page__bd_spacing">
-    <wux-button block type="royal">{{time}}</wux-button>
-    </view>
-    </view>
+  <view class="time-button">
+      <view class="times-tab" wx:for="{{times}}" wx:for-item="time">
+      <!-- <van-button size="small" plain type="info">{{time}}   </van-button> -->
+      <view class="page__bd page__bd_spacing">
+      <wux-button block type="royal">{{time}}</wux-button>
+      </view>
+      </view>
+  </view>
 </view>
 
-<!-- <view class="time-button">
-        <wux-grids>
-        <view class="times-tab" wx:for="{{times}}" wx:for-item="time">
-            <wux-grid style="royal">
-                <view>{{time}}</view>
-            </wux-grid>
-             </view>
-        </wux-grids>
-        </view> -->
+
+
+
+
 
 <!-- Booking: booking confirmation submition button -->
 <view class="confirm">
- <wux-button block outline type="royal" bindtap="goToConfirm" >Confrim</wux-button>
+ <wux-button block outline type="royal" bindtap="goToConfirm" >Confirm</wux-button>
 </view>
 

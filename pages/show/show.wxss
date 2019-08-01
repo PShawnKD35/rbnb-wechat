@@ -3,7 +3,11 @@
 .search {
   border-radius: 20px;
 }
-
+.section{
+  padding: 20rpx;
+  border-bottom: 1px solid #aaaaaa;
+  border-top: 1px solid #aaaaaa;
+}
 .image{
   background-size: fill;
   background-position: center;
@@ -11,7 +15,6 @@
   padding: 15px 0;
   height: 300rpx;
   width: auto;
-
 }
 
 .background {

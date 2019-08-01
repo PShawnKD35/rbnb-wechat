@@ -22,7 +22,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.7.7",
-	"appid": "wx809844f46109ac7a",
+	"appid": "wx0531a70867aa4397",
 	"projectname": "%E8%AF%95%E4%B9%8E",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 7,
 			"list": [
 				{
 					"id": -1,
@@ -68,6 +68,42 @@
 					"id": -1,
 					"name": "pages/show/show",
 					"pathName": "pages/show/show",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/search_services/search_services",
+					"pathName": "pages/search_services/search_services",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/confirmation/confirmation",
+					"pathName": "pages/confirmation/confirmation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/booking/booking",
+					"pathName": "pages/booking/booking",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "profile",
+					"pathName": "pages/profile/profile",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "available service",
+					"pathName": "pages/availableservice/availableservice",
+					"query": "",
 					"scene": null
 				}
 			]

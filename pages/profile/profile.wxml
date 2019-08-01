@@ -1,0 +1,14 @@
+
+
+<view class="sub-title"> Start Time {{ displayValue6 }}</view>
+<wux-date-picker-view 
+  use12Hours mode="datetime" 
+  lang="en" 
+  value="{{ value6 }}" 
+  data-index="6" 
+  bind:valueChange="onValueChange" 
+  minuteStep=
+  minDate=""
+/>
+
+

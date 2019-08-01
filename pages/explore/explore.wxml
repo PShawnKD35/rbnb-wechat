@@ -1,14 +1,39 @@
 <!-- Search bar, require: search params -->
-<view class="search">
-<van-search background="#5744CC" shape="round" value="{{ value }}" placeholder="E.g DJ SET" />
-</view>
+<view class="purple-container">
+  <view class="search">
+    <van-search 
+      background="#5744CC" 
+      shape="round" 
+      value="{{ value }}"  
+      use-action-slot bind:search="onSearch"
+      placeholder="E.g DJ SET" 
+    />
+  </view>
 
 <!-- map api, require: service latitudes &  -->
-<!-- <view class="map" style="background-image: url(https://images2015.cnblogs.com/blog/1149975/201706/1149975-20170615165945103-1811100363.png);"> -->
+  <cover-view  class="map-wrapper">
+    <view id="corner"></view>
+    <map id="map" 
+      longitude= "121.45806" 
+      latitude= "31.22222" 
+      scale="14" 
+      controls="{{controls}}" 
+      bindcontroltap="controltap" 
+      markers="{{markers}}" 
+      bindmarkertap="markertap 
+      polyline="{{polyline}}" 
+      bindregionchange="regionchange" 
+      show-location style="width: 100%; height: 530px;">
+    </map>
+</cover-view >
+</view>
 
-
-<!-- Swiping bar, require: catagory search params -->
- <van-tabs color="#5744CC" bind:click="onClick" active="{{ active }}">
+<!-- Swiping bar-->
+<van-tabs 
+color="#5744CC" 
+bind:change="onChange" 
+active="{{ active }}">
+  <van-tab title="All"></van-tab>
   <van-tab title="Cooking"></van-tab>
   <van-tab title="Art"></van-tab>
   <van-tab title="Tech"></van-tab>
@@ -17,10 +42,10 @@
 </van-tabs>
 
 <!-- show: list, require: service_id(params) from filters, then do loop on card-product(params: service.name & service.item.name) -->
-<view class="card-product">
-  <view class="card-product-infos">
-    <h2>DJ Big Cat</h2>
-    <p>Test out my YK DJ speakers</p>
+<view class="card-product" wx:for="{{services}}" wx:for-item="service">
+  <view  data-id="{{service.id}}" bindtap="goToService" class="card-product-infos">
+    <h2>{{service.name}}</h2>
+    <p>{{description}}</p>
     <van-rate size="15"
   value="3"
   count="5"
@@ -29,7 +54,7 @@
     <image src="/images/ebat5.jpg" mode="aspectFit">  
     </image> 
 </view>
-<view class="card-product">
+<!-- <view class="card-product">
   <view class="card-product-infos">
     <h2>Dennon DJ Set</h2>
     <p>Test out the Denon DJ Set</p>
@@ -65,7 +90,7 @@ mixer</p>
   bind:change="onChange"/>
   </view>
    <image src="/images/ebay3.jpg" mode="aspectFit"> </image>
-</view>
+</view> -->
 
 
 

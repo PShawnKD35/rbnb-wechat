@@ -51,9 +51,11 @@ Page({
   onLoad: function (options) {
     let page = this
     const url = app.globalData.url
+    console.log(url)
     // Get Request
     // Items and services
     wx.request({
+
       url: url + 'services',
       method: 'GET',
       success(res) {

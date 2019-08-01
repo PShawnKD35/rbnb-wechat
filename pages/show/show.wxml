@@ -47,21 +47,13 @@
       </view>
 
 <!-- Date picker -->
-
-      <van-datetime-picker
-        title="Choose Date"
-        type="date"
-        value="{{ currentDate }}"
-        bind:input="onInput"
-        min-date="{{ minDate }}"
-        formatter="{{ formatter }}"
-        cancel-button-text=""
-        confirm-button-text=""
-        item-height="35"
-        visible-item-count="3"
-        max-date="{{ maxDate }}"
-      />  
-
+<view class="section">
+  <picker mode="date" value="" start="2019-08-01" end="2019-11-01" bindchange="bindDateChange">
+    <view class="picker">
+      Choose Date: {{date}}
+    </view>
+  </picker>
+</view>
 
 <!-- Service: Available.timeslot(buttons) -->
   <view class="time-button">

@@ -6,27 +6,16 @@ Page({
    * Page initial data
    */
   data: {
-    bookingDate: '',
-    times: ["9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00","17:00","18:00"],
-
-    currentDate: new Date().getTime(),
-    minDate: new Date().getTime(),
-    maxDate: new Date().getTime() + 13410355483,
-    formatter(type, value) {
-      if (type === 'year') {
-        return `${value}`;
-      } else if (type === 'month') {
-        return `${value}`;
-      }
-      return value;
-    }
+    bookingDate: ''
   },
 
-  onInput(event) {
-    console.log(event.detail)
+
+  bindDateChange(e) {
+    let { value } = e.detail;
+    console.log("date:", value);
     this.setData({
-      bookingDate: event.detail
-    });
+      bookingDate: value
+    })
   },
 
   /**

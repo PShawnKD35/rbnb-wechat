@@ -9,7 +9,6 @@
     "pages/confirmation/confirmation",
     "pages/availableservice/availableservice",
     "pages/profile/profile"
-
   
   ],
   "window": {

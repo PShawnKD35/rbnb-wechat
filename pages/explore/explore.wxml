@@ -1,18 +1,39 @@
 <!-- Search bar, require: search params -->
 <view class="purple-container">
-<view class="search">
-<van-search background="#5744CC" shape="round" value="{{ value }}"  use-action-slot bind:search="onSearch" placeholder="E.g DJ SET" />
-</view>
+  <view class="search">
+    <van-search 
+      background="#5744CC" 
+      shape="round" 
+      value="{{ value }}"  
+      use-action-slot bind:search="onSearch"
+      placeholder="E.g DJ SET" 
+    />
+  </view>
 
 <!-- map api, require: service latitudes &  -->
-<cover-view  class="map-wrapper">
+  <cover-view  class="map-wrapper">
     <view id="corner"></view>
-    <map id="map" longitude= "121.45806" latitude= "31.22222" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 530px;"></map>
+    <map id="map" 
+      longitude= "121.45806" 
+      latitude= "31.22222" 
+      scale="14" 
+      controls="{{controls}}" 
+      bindcontroltap="controltap" 
+      markers="{{markers}}" 
+      bindmarkertap="markertap 
+      polyline="{{polyline}}" 
+      bindregionchange="regionchange" 
+      show-location style="width: 100%; height: 530px;">
+    </map>
 </cover-view >
 </view>
 
-<!-- Swiping bar, require: catagory search params -->
- <van-tabs color="#5744CC" bind:click="onClick" active="{{ active }}">
+<!-- Swiping bar-->
+<van-tabs 
+color="#5744CC" 
+bind:change="onChange" 
+active="{{ active }}">
+  <van-tab title="All"></van-tab>
   <van-tab title="Cooking"></van-tab>
   <van-tab title="Art"></van-tab>
   <van-tab title="Tech"></van-tab>

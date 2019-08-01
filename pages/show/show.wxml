@@ -12,7 +12,7 @@
 
 <!-- service: title of the service -->
  <view class="white">
- <view class="title">{{story.name}}</view>
+ <view class="title">{{service.name}}</view>
 
  </view>
 
@@ -26,16 +26,14 @@
 </view>
 
 <!-- Service: Description, experience-->
-<view class="description">
-      <view class="description-block">
-    <text class="h3">Description\n</text>
-      </view>
-      <view class="description-block">
-    <text class="h4">{{service.name}}\n</text>
-      </view>
-    <text class="p">{{service.description}}
-    </text>
-</view>
+
+    <view class="description-block">
+    <text class="h3">{{service.address}}\n</text>
+    </view>
+    <view class="description-block">
+    <text class="h4">RMB{{service.charge}}\n</text></view>
+    <text class="p">{{service.description}}</text>
+
 
 <!-- Service.item: item.name, item.description -->
 <view class="description">
@@ -44,7 +42,11 @@
       </view>
       <view class="description-block">
     <text class="h4">{{item.description}} (Black)</text>
+        <text class="h4">{{item.purchase_date}}</text>
+
       </view>
+
+<!-- Date picker -->
 
       <van-datetime-picker
         title="Choose Date"
@@ -53,8 +55,8 @@
         bind:input="onInput"
         min-date="{{ minDate }}"
         formatter="{{ formatter }}"
-        cancel-button-text="Cancel"
-        confirm-button-text="Confirm"
+        cancel-button-text=""
+        confirm-button-text=""
         item-height="35"
         visible-item-count="3"
         max-date="{{ maxDate }}"
@@ -71,9 +73,6 @@
       </view>
   </view>
 </view>
-
-
-
 
 
 

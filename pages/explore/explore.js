@@ -1,33 +1,47 @@
 // pages/explore/explore.js
 Page({
-
-  /**
-   * Page initial data
-   */
   data: {
-
+    markers: [],
+  },
+  // for the sliding tabs
+  onChange(event) {
+    console.log(event.detail.title)
+    wx.showToast({
+      title: `切换到标签 ${event.detail.title}`,
+      icon: 'none'
+    });
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
   onLoad: function (options) {
     let page = this
-    // Get User infor
-    this.setData({ userId: getApp().globalData.userId })
     // Get Request
     // Items and services
     wx.request({
-
       url: "http://dragonbnb.herokuapp.com/api/v1/services",
       method: 'GET',
       success(res) {
         // get from json key (services:)
         const services = res.data
+        const markers = []
         page.setData({
           services: services,
-
         });
+        services.forEach(function(service) {
+          markers.push(
+            {iconPath: "../img/marker.png",
+              width: 30,
+              height: 30,
+              latitude: service.latitude,
+              longitude: service.longitude,
+              id: service.id
+            }
+          )
+        });
+        page.setData({
+          markers: markers
+        })
+
+
         wx.hideToast();
       }
     });
@@ -40,6 +54,7 @@ Page({
         const speed = res.speed
         const accuracy = res.accuracy
         that.setData({ latitude, longitude, speed, accuracy })
+      //markers
       }
     })
   },

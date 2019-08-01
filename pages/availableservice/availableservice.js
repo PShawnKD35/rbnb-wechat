@@ -5,7 +5,16 @@ Page({
    * Page initial data
    */
   data: {
-
+    minHour: 10,
+    maxHour: 20,
+    minDate: new Date().getTime(),
+    maxDate: new Date(2019, 10, 1).getTime(),
+    currentDate: new Date().getTime()
+  },
+  onChange(event) {
+    this.setData({
+      currentDate: event.detail.value
+    });
   },
 
   /**
@@ -29,26 +38,6 @@ Page({
 
   },
 
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
-  },
 
   /**
    * Called when page reach bottom
@@ -57,10 +46,4 @@ Page({
 
   },
 
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
-
-  }
 })

@@ -1,2 +1,27 @@
 <!--pages/availableservice/availableservice.wxml-->
 <text>pages/availableservice/availableservice.wxml</text>
+<van-datetime-picker
+  title="Start Time"
+  type="datetime"
+  value="{{ currentDate }}"
+  min-date="{{ minDate }}"
+  max-date="{{ maxDate }}"
+  bind:change="onChange"
+  cancel-button-text="Cancel"
+  confirm-button-text="Confirm"
+  item-height="35"
+  visible-item-count="3"  
+/>
+
+<van-datetime-picker
+  title="End Time"
+  type="datetime"
+  value="{{ currentDate }}"
+  min-date="{{ minDate }}"
+  max-date="{{ maxDate }}"
+  bind:change="onChange"
+  cancel-button-text="Cancel"
+  confirm-button-text="Confirm"
+  item-height="35"
+  visible-item-count="3"  
+/>

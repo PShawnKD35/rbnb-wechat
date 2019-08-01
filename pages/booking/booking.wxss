@@ -4,7 +4,6 @@
   height: 100px;
   position:relative;
 }
-
 .white {
 border-radius: 20px;
 position: relative;
@@ -12,12 +11,9 @@ height: 100px;
 margin-top: -80px;
 background-color: white;
 }
-
 .sub-title { 
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
 }
-
-
 .avatar-bordered {
   margin-right:20px;
   width: 90px;
@@ -27,7 +23,6 @@ background-color: white;
   display: flex;
   justify-content: end;
 }
-
 .card-product {
   margin:10px;
   overflow: hidden;
@@ -40,13 +35,11 @@ background-color: white;
 .card-product-infos{
   flex: 60%;
 }
-
 .card-product-infos .h2 {
   font-size: 22px;
   font-weight: bold;
   color:#5744CC;
   margin-bottom:10px;
-
 }
 .card-product-infos .h3 {
   margin-left:10px;
@@ -54,14 +47,12 @@ background-color: white;
    margin-bottom:10px;
   color:grey;
 }
-
 .card-product-infos .p {
   font-size: 14px;
   line-height: 1.4;
   opacity: .7;
   text-align: right;
 }
-
 .card-product .card-product-infos {
   padding: 10rpx;
   margin:20px;

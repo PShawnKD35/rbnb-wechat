@@ -1,0 +1,76 @@
+<!--pages/confirmation.wxml-->
+<!--pages/show/show.wxml-->
+<view class="purple-background" style="padding-top: 5em; position: relative">
+​
+  <view class="flex justify-between items-center" style="position: absolute; top: 1em; width: 90%; ">
+    <text class="h3">Sea Dragon</text>
+    <image class="profile-photo" src="https://images.unsplash.com/photo-1546593928-0e028d71af91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80.png" mode="aspectFill"/>
+  </view>
+​
+  <view class="white-box">
+    <!-- <view class="top box"></view> -->
+    <!-- <view class="circle"></view>
+   -->
+   <view class="title-font" style="position: relative; text-align: center; width: 100%;">CONFIRMED</view>
+​
+  <view class="detail-box">
+    <view class="flex justify-between items-center" style="margin-bottom: 20px">
+      <view>
+        <view class="font" style="margin-bottom: 10px">Date</view>
+        <view class="small-text">2019/12/31</view>
+      </view>
+   
+      <view class="order-time">
+        <view class="font" style="margin-bottom: 10px">Time</view>
+        <view class="small-text">16:00-18:00</view>
+      </view>
+​
+     </view>
+​
+    <view class="order-description" style="margin-bottom: 20px"> 
+      <view style="margin-bottom: 10px">
+        <p class="font">Order Detail</p>
+      </view>
+      <view>
+        <p class="small-text">I am a DMC champion living in Hongkou Shanghai.  I have a Pioneer DJ controller and would be very happy to let someone try them out or give a lesson. </p>
+      </view>
+      
+    </view>  
+​
+​
+    <view class="flex-justify-between items-center" style="margin-bottom: 20px">
+​
+      <view  sytle="margin-bottom: 10px">
+        <p class="font">Transaction</p>
+      </view>
+      <view>
+        <text class="small-text">12000RMB</text>
+      </view>
+    </view>
+  </view>
+    
+  </view>
+​
+​
+​
+​
+​
+    <!-- <view class= "form-details">
+      <view class="line"></view>
+      <view class="form-fields-top">
+        <view class="box-1">Date:</view>                        
+        <view class="box-2">Time: </view>
+      </view> -->
+  <!-- </view> -->
+​
+    <!-- <view class="form-fields-middle">
+      <view class="box-3">Order Detail:</view>
+    </view> -->
+​
+    <!-- <view class="form-fields-bottom">
+      <view class="box-4">Transaction:</view>
+    <a class="btn btn-flat" href="#">Detail</a>
+    </view> -->
+​
+​
+</view>

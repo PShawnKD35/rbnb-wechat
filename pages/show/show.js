@@ -29,7 +29,19 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    let page = this
+    this.setData({ UserInfo: getApp().globalData.userInfo })
+    wx.request({
+      url: `http://dragonbnb.herokuapp.com/api/v1/services/${options.id}`,
+      method: 'GET',
+      success(res) {
+        console.log(res)
+        page.setData({
+        story: res.data.service,
+        item: res.data.service.items[0]});
+        wx.hideToast();
+      }
+    });
   },
 
   /**
@@ -79,5 +91,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  goToConfirm: function () {
+    wx.navigateTo({
+      url: '/pages/confirmation/confirmation',
+    })
   }
 })

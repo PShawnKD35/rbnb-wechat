@@ -1,4 +1,4 @@
-// pages/landing/landing.js
+// pages/confirmation/confirmation.js
 Page({
 
   /**

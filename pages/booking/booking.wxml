@@ -1,5 +1,4 @@
- <view class="purple"></view>
-
+<view class="purple"></view>
 <!-- service: title of the service -->
  <view class="white">
     <view class="sub-title"></view>
@@ -7,7 +6,6 @@
         <wux-tab key="tab1" title="Booking"></wux-tab>
         <wux-tab key="tab2" title="Upload"></wux-tab>
         </wux-tabs>
-
       <view class="card-product">
       
       <view class="card-product-infos">
@@ -18,7 +16,6 @@
        <image class="avatar-bordered" src="/images/pro2.jpeg">  
     </image> 
     </view>
-
      <view class="card-product">
       <view class="card-product-infos">
         <view class="h2">Upcoming\n</view>
@@ -28,7 +25,6 @@
        <image class="avatar-bordered" src="/images/pro1.jpeg">  
     </image> 
     </view>
-
      <view class="card-product">
       <view class="card-product-infos">
         <view class="h2">Past Event\n</view>
@@ -38,7 +34,6 @@
        <image class="avatar-bordered" src="/images/pro6.jpeg">  
     </image> 
     </view>
-
      <view class="card-product">
       <view class="card-product-infos">
         <view class="h2">Past Event\n</view>
@@ -48,5 +43,4 @@
        <image class="avatar-bordered" src="/images/pro5.jpeg">  
     </image> 
     </view>
-
  </view>

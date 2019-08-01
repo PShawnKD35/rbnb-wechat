@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "van-button": "/dist1/button/index",
-    "wux-button": "/dist2/button/index"
+    "wux-button": "/dist2/button/index",
+    "van-loading": "/dist1/loading/index"
   }
 }

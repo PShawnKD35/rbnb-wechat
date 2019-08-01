@@ -1,12 +1,12 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
     "pages/landing/landing",
     "pages/home/home",
     "pages/explore/explore",
     "pages/show/show",
-    "pages/booking/booking"
+    "pages/booking/booking",
+    "pages/confirmation/confirmation"
 
   
   ],
@@ -45,5 +45,10 @@
 
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "Gimme your location yo"
+    }
+  }
 }

@@ -1,4 +1,5 @@
 // pages/show/show.js
+const app = getApp()
 Page({
 
   /**
@@ -35,10 +36,9 @@ Page({
     let page = this
     this.setData({ UserInfo: getApp().globalData.userInfo })
     wx.request({
-      url: `http://dragonbnb.herokuapp.com/api/v1/services/${options.id}`,
+      url: `${app.globalData.url}services/${options.id}`,
       method: 'GET',
       success(res) {
-        console.log(res)
         page.setData({
         service: res.data.service,
         item: res.data.service.items[0]});

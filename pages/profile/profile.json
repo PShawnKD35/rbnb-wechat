@@ -1,6 +1,6 @@
 {
   "usingComponents": {
     "wux-segmented-control": "/dist2/segmented-control/index",
-    "wux-date-picker-view": "/dist2/date-picker-view/index" 
+    "wux-date-picker-view": "/dist2/date-picker-view/index"
   }
 }

@@ -3,3 +3,48 @@
   padding: 20rpx;
   border-bottom: 1px solid #aaaaaa;
 }
+.purple {
+  background-color:#5744CC;
+  height: 100px;
+  position:relative;
+}
+
+.white {
+border-radius: 20px;
+position: relative;
+height: 67px;
+margin-top: -50px;
+background-color: white;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.form-group {
+  margin:20px;
+}
+
+.section__title{
+   font-size: 18px;
+  font-weight: bold;
+  color:#5744CC;
+
+}

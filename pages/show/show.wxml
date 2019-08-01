@@ -13,58 +13,62 @@
 <!-- service: title of the service -->
  <view class="white">
  <view class="title">{{service.name}}</view>
-
- </view>
+  </view>
 
 <!-- Service: User-name, User-credit.rate % -->
 <view class="card-product">
   <view class="card-product-infos">
-    <h2>{{service.user.name}}</h2>
-    <p>{{service.user.description}}</p>
+    <view class="h2">{{service.user.name}}</view>
+    <view class= "p">{{service.user.email}}</view>
   </view>
   <image class="avatar-bordered" alt="avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/sarahlafer" />
 </view>
 
 <!-- Service: Description, experience-->
 
-    <view class="description-block">
-    <text class="h3">{{service.address}}\n</text>
+<view class="description">
+    <view class="h3">Description</view>
+      <view class="description-block">
+      <view class="p">{{service.description}}     </view>
+      </view>
+     <view class="description-block">
+      <view class="h4"><wux-icon size="32" type="ios-pin" />  {{service.address}}\n</view>
     </view>
     <view class="description-block">
-    <text class="h4">RMB{{service.charge}}\n</text></view>
-    <text class="p">{{service.description}}</text>
+      <view class="h4"><wux-icon size="22" type="logo-yen" /> {{service.charge}}RMB/hour\n</view>
+    </view>
+  </view>
+    
 
 
 <!-- Service.item: item.name, item.description -->
 <view class="description">
+  <view class="h3">{{service.items[0].name}}</view>
       <view class="description-block">
-    <text class="h3">{{item.name}}\n</text>
-      </view>
-      <view class="description-block">
-    <text class="h4">{{item.description}} (Black)</text>
-        <text class="h4">{{item.purchase_date}}</text>
-
-      </view>
+    <view class="p">{{service.items[0].description}} (Black) </view>
+    </view>
+  </view>
 
 <!-- Date picker -->
-<view class="section">
+<view class="description">
+<view class="h3">Available Time</view>
   <picker mode="date" value="" start="2019-08-01" end="2019-11-01" bindchange="bindDateChange">
     <view class="picker">
-      Choose Date: {{date}}
+      Choose Date {{date}}
     </view>
   </picker>
 </view>
 
 <!-- Service: Available.timeslot(buttons) -->
-  <view class="time-button">
+  <!-- <view class="time-button">
       <view class="times-tab" wx:for="{{times}}" wx:for-item="time">
       <!-- <van-button size="small" plain type="info">{{time}}   </van-button> -->
-      <view class="page__bd page__bd_spacing">
+      <!-- <view class="page__bd page__bd_spacing">
       <wux-button block type="royal">{{time}}</wux-button>
       </view>
       </view>
-  </view>
-</view>
+  </view> --> 
+
 
 
 
@@ -72,4 +76,5 @@
 <view class="confirm">
  <wux-button block outline type="royal" bindtap="goToConfirm" >Confirm</wux-button>
 </view>
+
 

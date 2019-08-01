@@ -60,15 +60,15 @@ background-color: white;
 .card-product {
   margin:10px;
   overflow: hidden;
-  height: 100px;
   background: white;
   display: flex;
   align-items: center;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
-  /* background-color:blue; */
+  justify-content: flex-end;
 }
-.card-product-infos{
+.card-product-infos p h2{
   flex: 60%;
+  text-align: right;
 }
 .image{
   flex: 40%;
@@ -77,14 +77,14 @@ background-color: white;
 
 }
 
-.card-product h2 {
+.h2 {
   font-size: 18px;
   font-weight: bold;
   margin: 0;
   text-align: right;
 }
 
-.card-product p {
+.p {
   font-size: 14px;
   line-height: 1.4;
   opacity: .7;
@@ -94,8 +94,7 @@ background-color: white;
 }
 
 .card-product .card-product-infos {
-  padding: 10rpx;
-  margin:20px;
+  margin:10px;
   display: flex;
 flex-direction: column;
 
@@ -104,6 +103,7 @@ flex-direction: column;
 .description{
   display: block;
   margin:20px;
+  padding:10px;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
 
 }
@@ -112,24 +112,23 @@ flex-direction: column;
   margin-bottom: 20px;
 }
 
-.description .h3 {
+.h3 {
   font-size: 18px;
   font-weight: bold;
   color:#5744CC;
 
 }
-.description .h4 {
+ .h4 {
   font-size: 16px;
-  font-weight: bold;
 }
 
 
-.description .p {
+ .p {
   font-size: 14px;
   line-height: 1.4;
   opacity: .7;
   margin-top: 8px;
-  text-align: right;
+  text-align: left;
 }
 
 .time-button {
@@ -157,4 +156,12 @@ margin:3px;
 .confirm {
   margin:15px;
   margin-bottom: 30px;
+}
+
+.picker {
+ text-align: center;
+ font-size: 14px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-top: 8px;
 }

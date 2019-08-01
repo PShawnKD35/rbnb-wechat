@@ -1,3 +1,38 @@
+
+ <view class="purple"></view>
+ <view class="white">
+ <view class="title">Profile Page</view>
+ </view>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"     mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  <view></view>
+  <block wx:if="{{!hasRegistered}}">
+          <!-- form for user register -->
+        <form bindsubmit="formSubmit" bindreset="formReset" class="form">
+          <view class="form-group">
+            <view class="section__title">Name</view>
+            <input class="title" name="name" value="{{user.name}}" />
+            <view class="section__title">Description</view>
+            <input class="userDescription" name="description" value="{{user.description}}" />
+            <view class="section__title">Email</view>
+            <input class="userEmail" name="email" value="{{user.email}}" />
+          </view>
+          <view class="btn-area">
+              <button  open-type="getUserInfo" bindgetuserinfo="getUserInfo"> Give us your Avatar! </button>
+
+            <button formType="submit">Register</button>
+          </view>
+        </form>
+</block>
+
+
+    <block wx:else>
+
+      <view>Name: {{user.name}}</view>
+      <view>Email: {{user.email}}</view>
+      <view>Description: {{user.description}}</view>
+
+<view>Be a Shifu!</view>
 <view class="section">
   <picker mode="date" value="" start="2019-08-01" end="2019-11-01" bindchange="bindDateChange">
     <view class="picker">
@@ -7,9 +42,14 @@
 </view>
 
 <view class="section">
-  <picker mode="time" value="" start="09:01" end="21:01" bindchange="bindTimeChange">
+
+  <picker mode="time" value="" start="06:00" end="21:00" bindchange="bindTimeChange">
     <view class="picker">
-      Choose Time: {{time}}
+      Start Time: {{time}}
     </view>
+<!-- input field for name, description, address, charge -->
+<!-- radio button for category -->
+<!-- https://developers.weixin.qq.com/miniprogram/dev/component/picker.html -->
   </picker>
 </view>
+</block>

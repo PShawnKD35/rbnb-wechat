@@ -1,26 +1,51 @@
 
- <view class="purple"></view>
- <view class="white">
- <view class="title">Profile Page</view>
- </view>
-      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"     mode="cover"></image>
+ <view class="purple">
+ <view class="title">
+ Profile Page</view>
+<view class="user-info">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
+    
   <view></view>
   <block wx:if="{{!hasRegistered}}">
           <!-- form for user register -->
         <form bindsubmit="formSubmit" bindreset="formReset" class="form">
+        <view class="avatar-click">
+         <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> <text class="instruction">Click for Avatar!</text></button>
+              
+        </view>
+             
           <view class="form-group">
             <view class="section__title">Name</view>
-            <input class="title" name="name" value="{{user.name}}" />
-            <view class="section__title">Description</view>
-            <input class="userDescription" name="description" value="{{user.description}}" />
-            <view class="section__title">Email</view>
-            <input class="userEmail" name="email" value="{{user.email}}" />
-          </view>
-          <view class="btn-area">
-              <button  open-type="getUserInfo" bindgetuserinfo="getUserInfo"> Give us your Avatar! </button>
+            <view class="content">
+            <input class="input" name="name" value="{{user.name}}" placeholder="give us your name"/>
+            </view>
 
-            <button formType="submit">Register</button>
+            <view class="section__title">Description</view>
+            <view class="content">
+            <input class="input" name="description" placeholder="Tell us more"value="{{user.description}}" />
+            </view>
+
+            <view class="section__title">Email</view>
+            <view class="content">
+            <input class="input" placeholder="so we can reach out" name="email" value="{{user.email}}" />
+            </view>
+          </view>
+
+          <radio-group class="radio-group">
+          <label><radio value="radio1"/><text class="radios">Music</text></label>
+          <label><radio value="radio2"/><text     class="radios">Art</text></label>
+          <label><radio value="radio2"/><text class="radios">Tech\n</text></label>
+          <label><radio value="radio2"/><text class="radios">Outdoor</text></label>
+          <label><radio value="radio2"/><text class="radios">Driving</text></label>
+          <label><radio value="radio2"/><text class="radios">Pet</text></label>
+          </radio-group>
+
+
+
+          <view class="btn-area">
+<wux-button block size="default" type="light"  formType="submit" ><wux-icon type="ios-save" size="18" /> Register</wux-button>
           </view>
         </form>
 </block>
@@ -53,3 +78,5 @@
   </picker>
 </view>
 </block>
+
+</view>

@@ -1,47 +1,67 @@
 // pages/explore/explore.js
+const app = getApp()
 Page({
   data: {
     markers: [],
   },
   // for the sliding tabs
+  // filter by catagory and updating data
   onChange(event) {
-    console.log(event.detail.title)
+    const catagory = event.detail.title
+    const services = this.data.services
+    const fifilteredServices = []
     wx.showToast({
-      title: `切换到标签 ${event.detail.title}`,
+      title: `Switched to ${event.detail.title}`,
       icon: 'none'
     });
+    services.forEach(function(service) {
+      if (service.catagory = catagory) {
+        fifilteredServices.push(service)
+      }
+    });
+    this.setMarker(fifilteredServices)
+    this.setData({
+      services: fifilteredServices
+    })
   },
 
+  setMarker(services) {
+    let page = this
+    page.setData({
+      markers: []
+    })
+    const markers = []
+    services.forEach(function (service) {
+      markers.push(
+        {
+          iconPath: "../img/marker.png",
+          width: 30,
+          height: 30,
+          latitude: service.latitude,
+          longitude: service.longitude,
+          id: service.id
+        }
+      )
+    });
+    page.setData({
+      markers: markers
+    })
+  },
+  
   onLoad: function (options) {
     let page = this
+    const url = app.globalData.url
     // Get Request
     // Items and services
     wx.request({
-      url: "http://dragonbnb.herokuapp.com/api/v1/services",
+      url: url + 'services',
       method: 'GET',
       success(res) {
-        // get from json key (services:)
         const services = res.data
-        const markers = []
         page.setData({
           services: services,
         });
-        services.forEach(function(service) {
-          markers.push(
-            {iconPath: "../img/marker.png",
-              width: 30,
-              height: 30,
-              latitude: service.latitude,
-              longitude: service.longitude,
-              id: service.id
-            }
-          )
-        });
-        page.setData({
-          markers: markers
-        })
-
-
+        page.setMarker(services);
         wx.hideToast();
       }
     });
@@ -53,8 +73,6 @@ Page({
         const longitude = res.longitude
         const speed = res.speed
         const accuracy = res.accuracy
-        that.setData({ latitude, longitude, speed, accuracy })
-      //markers
       }
     })
   },
@@ -69,17 +87,18 @@ Page({
 // not fetching data after search
   onSearch: function (event) {
     let page = this
-    let searchKeyword = console.log(event.detail)
+    let searchKeyword = event.detail
     wx.request({
-      url: `https://dragonbnb.herokuapp.com/api/v1/services/search?item_name=${searchKeyword}`,
+      url: `${app.globalData.url}services/search?item_name=${searchKeyword}`,
       method: 'GET',
       success(res){
         console.log(res)
         const services = res.data
+        page.setMarker(services)
         page.setData({
           services: services
         })
       }
     })
-  }
+  },
 })

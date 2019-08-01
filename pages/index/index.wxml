@@ -1,17 +1,13 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+ <view class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://cdn.dribbble.com/users/43455/screenshots/3393387/dribbble.gif);">
   </view>
-  <!-- <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-    <text class="user-motto">{{mottoSide}}</text>
-  </view> -->
-
-  <view>Hello world</view>
-
+ 
+ <view class="description">
+    <view class="logoname">试乎 TRYIT\n</view>
+    <view class="usermotto"> You will never know unless you try
+    </view> 
+​
+    <view class="enter">
+      <wux-button bindtap="bindViewTap" open-type="getUserInfo" bindgetuserinfo="getUserInfo"  block size= type="royal">Enter</wux-button>
+    </view>
+​
 </view>

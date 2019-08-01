@@ -31,24 +31,28 @@ color="#5744CC"
 bind:change="onChange" 
 active="{{ active }}">
   <van-tab title="All"></van-tab>
-  <van-tab title="Cooking"></van-tab>
+   <van-tab title="Music"></van-tab>
+   <van-tab title="Outdoor"></van-tab>
   <van-tab title="Art"></van-tab>
   <van-tab title="Tech"></van-tab>
   <van-tab title="Driving"></van-tab>
+  <van-tab title="Pet"></van-tab>
   <van-tab title="DIY"></van-tab>
 </van-tabs>
 
 <view class="card-product" wx:for="{{services}}" wx:for-item="service">
   <view  data-id="{{service.id}}" bindtap="goToService" class="card-product-infos">
-    <h2>{{service.name}}</h2>
-    <p>{{description}}</p>
-    <van-rate size="15"
-  value="3"
-  count="5"
-  bind:change="onChange"/>
+    <view class="h2">{{service.name}}</view>
+
+     <view class="p"><wux-icon size="32" type="ios-pin" />  {{service.address}}</view>
+     <view class="h6"><wux-tag color="purple">{{service.category}}</wux-tag></view>
+
+  
   </view>
-    <image src="/images/ebat5.jpg" mode="aspectFit">  
-    </image> 
+  <view >
+  <image class="image" src="/images/ebat5.jpg">  
+    </image></view>
+     
 </view>
 <!-- <view class="card-product">
   <view class="card-product-infos">
@@ -90,4 +94,4 @@ mixer</p>
 
 
 
-
+ 

@@ -8,7 +8,9 @@
     "pages/booking/booking",
     "pages/confirmation/confirmation",
     "pages/availableservice/availableservice",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/addservice/addservice",
+    "pages/additem/additem"
   
   ],
   "window": {
@@ -37,7 +39,7 @@
         "selectedIconPath": "/images/open-book.png"
       },
       {
-        "pagePath": "pages/home/home",
+        "pagePath": "pages/profile/profile",
         "text": "My Profile",
         "iconPath": "/images/home.png",
         "selectedIconPath": "/images/home-2.png"

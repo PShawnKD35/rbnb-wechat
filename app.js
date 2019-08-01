@@ -11,8 +11,9 @@ App({
             code: res.code
           },
           success: (res) => {
-            console.log(res.data.userId)
-            this.globalData.openid = res.data.userId
+            this.globalData.userId = res.data.userId
+            console.log("got userId from backend")
+            console.log("gloabl data userId: " + this.globalData.userId)
           }
         })
       }
@@ -20,6 +21,7 @@ App({
   },
 
   globalData: {
+    userId : '',
     userInfo : null,
     url: 'http://localhost:3000/api/v1/'
     // url: 'https://dragonbnb.herokuapp.com/api/v1/'

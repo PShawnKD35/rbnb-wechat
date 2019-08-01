@@ -1,5 +1,5 @@
 <view>Profile</view>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"     mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   <view></view>
   <block wx:if="{{!hasRegistered}}">
@@ -28,7 +28,7 @@
       <view>Email: {{user.email}}</view>
       <view>Description: {{user.description}}</view>
 
-<view>Add service</view>
+<view>Be a Shifu!</view>
 <view class="section">
   <picker mode="date" value="" start="2019-08-01" end="2019-11-01" bindchange="bindDateChange">
     <view class="picker">

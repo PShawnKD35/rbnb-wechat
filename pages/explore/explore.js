@@ -3,26 +3,36 @@ const app = getApp()
 Page({
   data: {
     markers: [],
+    allServices :{}
   },
   // for the sliding tabs
   // filter by catagory and updating data
   onChange(event) {
-    const catagory = event.detail.title
-    const services = this.data.services
-    const fifilteredServices = []
-    wx.showToast({
-      title: `Switched to ${event.detail.title}`,
-      icon: 'none'
-    });
-    services.forEach(function(service) {
-      if (service.catagory = catagory) {
-        fifilteredServices.push(service)
-      }
-    });
-    this.setMarker(fifilteredServices)
-    this.setData({
-      services: fifilteredServices
-    })
+    const category = event.detail.title
+    const services = this.data.allServices
+    if (category != "All"){
+      const fifilteredServices = []
+      wx.showToast({
+        title: `Switched to ${event.detail.title}`,
+        icon: 'none'
+      });
+      services.forEach(
+        function (service) {
+          if (service.category == category) {
+            fifilteredServices.push(service)
+          }
+        }
+      );
+      this.setMarker(fifilteredServices)
+      this.setData({
+        services: fifilteredServices
+      })
+    }
+    else {
+      this.setData({
+        services: services
+      })
+    }
   },
 
   setMarker(services) {
@@ -62,6 +72,7 @@ Page({
         const services = res.data
         page.setData({
           services: services,
+          allServices: services
         });
         page.setMarker(services);
         wx.hideToast();

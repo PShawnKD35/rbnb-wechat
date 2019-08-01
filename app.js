@@ -1,10 +1,7 @@
 //app.js
 App({
   onLaunch: function () {
-    // post request to API
-    // should be posting to User.new
-    // data: { userID }
-    const host = 'http://localhost:3000/'
+    const host = this.globalData.url
     wx.login({
       success: res => {
         wx.request({
@@ -15,14 +12,16 @@ App({
           },
           success: (res) => {
             console.log(res.data.userId)
-
             this.globalData.openid = res.data.userId
           }
         })
       }
     })
   },
+
   globalData: {
-    userInfo : null
+    userInfo : null,
+    url: 'http://localhost:3000/api/v1/'
+    // url: 'https://dragonbnb.herokuapp.com/api/v1/'
   }
 })

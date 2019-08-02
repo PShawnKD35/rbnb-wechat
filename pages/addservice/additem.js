@@ -39,18 +39,18 @@ Page({
 
   submitNewItem(e) {
     let page = this
+    console.log(page.data.name)
     wx.request({
       url: `${app.globalData.url}services/${this.data.serviceId}/items`,
       method: 'POST',
-      data: {name: page.data.name, description: page.data.description},
-      
+      data: {item : {name: page.data.name, description: page.data.description}},
       success: function (res) {
         console.log(res)
-        wx.navigateTo({
-          url: `/pages/explore/explore`
+        wx.redirectTo({
+          url: '/pages/availableservice/availableservice',
         })
         wx.showToast({
-          title: `${this.data.name} added!`,
+          title: `${page.data.name} added!`,
           icon: 'none'
         });
       }

@@ -4,6 +4,8 @@
     "van-tag": "/dist1/tag/index",
     "van-tab": "/dist1/tab/index",
     "van-tabs": "/dist1/tabs/index", 
-    "van-rate": "/dist1/rate/index"
+    "van-rate": "/dist1/rate/index",
+    "wux-icon": "/dist2/icon/index",
+    "wux-tag": "/dist2/tag/index"
   }
 }

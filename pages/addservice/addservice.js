@@ -1,5 +1,4 @@
-// pages/addservice/addservice.js
-
+const app = getApp()
 Page({
 
   /**
@@ -23,9 +22,6 @@ Page({
     ]
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
   onLoad: function (options) {
 
   },
@@ -61,7 +57,6 @@ Page({
       address: this.data.address,
       charge: this.data.charge,
       category: this.data.category,
-      user_id: app.globalData.userId,
     }
 
     wx.request({
@@ -69,6 +64,7 @@ Page({
       method: 'POST',
       data: newService,
       success: function(res){
+        console.log(res)
         wx.navigateTo({
           url: "additem",
         })

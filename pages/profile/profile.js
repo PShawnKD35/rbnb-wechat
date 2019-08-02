@@ -1,14 +1,19 @@
-
 const app = getApp()
 Page({
   data: {
-    time: "",
-    date: "",
     userInfo: {},
     hasUserInfo: false,
     userId: '',
     hasRegistered: false,
-    user: ""
+    name: "",
+    description: "",
+    email: "",
+    user: {}
+  },
+  bindViewTap: function () {
+    wx.navigateTo({
+      url: `/pages/addservice/addservice`
+    })
   },
   onLoad: function () {
     let userId = app.globalData.userId
@@ -18,7 +23,8 @@ Page({
       url: `${app.globalData.url}users/${userId}`,
       method: 'GET',
       success(res) {
-        let user = res.data
+        console.log(res.data.user)
+        let user = res.data.user
         page.setData({ user: user })
         if (res.data.email != null) {
           page.setData({ hasRegistered: true })
@@ -32,25 +38,9 @@ Page({
       })
     }
   },
-  bindTimeChange(e) {
-    let { value } = e.detail;
-    console.log("time:", value);
-    this.setData({
-      time: value
-    })
-  },
-  bindDateChange(e) {
-    let { value } = e.detail;
-    console.log("date:", value);
-    this.setData({
-      date: value
-    })
-  },
+
   getUserInfo: function (e) {
     app.globalData.userInfo = e.detail.userInfo
-    // wx.request({
-    //   url: `${app.globalData.url}services`,
-    // })
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true,
@@ -58,12 +48,33 @@ Page({
       userInfo: app.globalData.userInfo
     })
   },
-  formSubmit: function (e) {
+
+  userName(e) {
+    this.setData({
+      name: e.detail.value
+    })
+  },
+
+  userDescription(e) {
+    this.setData({
+      description: e.detail.value
+    })
+  },
+
+  userEmail(e) {
+    this.setData({
+      email: e.detail.value
+    })
+  },
+
+  bindSubmit: function (e) {
     let id = this.data.userId
-    let name = e.detail.value.name
-    let description = e.detail.value.description
-    let email = e.detail.value.email
+    let name = this.data.name
+    let description = this.data.description
+    let email = this.data.email
     let user = { name: name, description: description, email: email }
+    console.log(user)
+    this.setData({user: user})
     wx.request({
       url: `${app.globalData.url}users/${id}`,
       method: 'PUT',

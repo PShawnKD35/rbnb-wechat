@@ -6,7 +6,9 @@ Page({
    * Page initial data
    */
   data: {
-    bookingDate: ''
+    bookingDate: '',
+    avaliableTime: '',
+    availableServices: []
   },
 
 
@@ -30,12 +32,17 @@ Page({
       success(res) {
         page.setData({
           service: res.data.service,
-          item: res.data.service.items[0]
+          item: res.data.service.items[0],
+          availableServices: res.data.available_services
         });
         wx.hideToast();
       }
     });
+
   },
+
+  
+
 
   /**
    * Lifecycle function--Called when page is initially rendered

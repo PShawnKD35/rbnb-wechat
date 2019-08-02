@@ -1,48 +1,41 @@
-
-
- <view class="purple">
-    <view class="title">Profile Page</view>
-    <view class="user-info">
+<view class="purple">
+ <view class="title">Profile</view>
+     <view class="white">
+      <view class="user-info">
       <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </view>
     
   <block wx:if="{{!hasRegistered}}">
-      <form bindsubmit="formSubmit" bindreset="formReset" class="form">
-      <view class="avatar-click">
+        <view class="avatar-click">
       <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 
       <text class="instruction">Click for Avatar!</text></button>
     </view>
-      
+    <form bindsubmit="formSubmit" bindreset="formReset" class="form">
     <view class="form-group">
       <view class="section__title">Name</view>
         <view class="content">
-        <input class="input" name="name" value="{{user.name}}" placeholder="give us your name"/>
+        <input class="input" bindinput="userName" name="name" value="{{user.name}}" placeholder="give us your name"/>
       </view>
-
       <view class="section__title">Description</view>
       <view class="content">
-       <input class="input" name="description" placeholder="Tell us more"value="{{user.description}}" />
+       <input class="input" name="description" bindinput="userDescription" placeholder="Tell us more"value="{{user.description}}" />
       </view>
-
       <view class="section__title">Email</view>
       <view class="content">
-        <input class="input" placeholder="so we can reach out" name="email" value="{{user.email}}" />
+        <input class="input" bindinput="userEmail" placeholder="so we can reach out" name="email" value="{{user.email}}" />
       </view>
     </view>
     <view class="btn-area">
-      <wux-button block size="default" type="light"  formType="submit" >
-      <wux-icon type="ios-save" size="18" /> Register</wux-button>
+      <wux-button block round size="default" type="royal" bindtap="bindSubmit" formType="submit" >Register</wux-button>
     </view>
     </form>
   </block>
-
-
 <block wx:else>
   <view>Name: {{user.name}}</view>
   <view>Email: {{user.email}}</view>
   <view>Description: {{user.description}}</view>
-  <button>Be a Shifu!</button>
+  <button bindtap="bindViewTap" >Be a Shifu!</button>
 </block>
-
+</view>
 </view>

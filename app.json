@@ -16,7 +16,8 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#5744CC",
-    "navigationBarTitleText": "试乎 TryIT",
+    "navigationBarTitleText": "试乎 TryIt",
+
     "navigationBarTextStyle": "white"
   },
   "tabBar": {

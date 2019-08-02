@@ -1,3 +1,4 @@
+
 const app = getApp()
 Page({
   data: {
@@ -19,13 +20,12 @@ Page({
       method: 'GET',
       success(res){
         let user = res.data
-        page.setData({user : user})
+        page.setData({user : user},
         if (res.data.email != null) {
           page.setData({ hasRegistered: true })
         }
       }
     })
-
     if(app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

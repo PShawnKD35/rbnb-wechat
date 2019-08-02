@@ -77,3 +77,4 @@
  <wux-button block outline type="royal" bindtap="goToConfirm" >Confirm</wux-button>
 </view>
 
+

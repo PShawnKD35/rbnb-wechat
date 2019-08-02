@@ -4,12 +4,24 @@ Page({
   data: {
     name: "",
     description: "",
+    serviceId: '',
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    let page = this
+    wx.request({
+      url: `${app.globalData.url}users/${app.globalData.userId}`,
+      method: "GET",
+      success(res){
+        console.log(res.data.service.id)
+        page.setData({
+          serviceId : res.data.service.id
+        })
+      }
+    })
 
   },
 
@@ -26,22 +38,19 @@ Page({
   },
 
   submitNewItem(e) {
-    console.log(this.data.name)
-    let newItem = {
-      name: this.data.name,
-      description: this.data.description,
-    }
-
+    let page = this
     wx.request({
-      url: `${app.globalData.url}users/${app.globalData.userId}/services`,
+      url: `${app.globalData.url}services/${this.data.serviceId}/items`,
       method: 'POST',
-      data: newItem,
+      data: {name: page.data.name, description: page.data.description},
+      
       success: function (res) {
+        console.log(res)
         wx.navigateTo({
           url: `/pages/explore/explore`
         })
         wx.showToast({
-          title: `this.data.name added!`,
+          title: `${this.data.name} added!`,
           icon: 'none'
         });
       }

@@ -48,9 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-
-			"current": 8,
-
+			"current": 9,
 			"list": [
 				{
 					"id": -1,
@@ -112,6 +110,13 @@
 					"id": -1,
 					"name": "pages/addservice/additem",
 					"pathName": "pages/addservice/additem",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "item",
+					"pathName": "pages/additem/additem",
 					"query": "",
 					"scene": null
 				}

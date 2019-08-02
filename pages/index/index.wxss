@@ -27,9 +27,10 @@
   background-position: center;
 } */
 .banner {
-  background-size: cover;
-  background-position: bottom;
+  background-size: fit;
+  background-position: center;
   background-repeat: no-repeat;
+  background-color: rgb(15,15,18);
   opacity: 0.9;
   position:fixed;
   width: 100%;

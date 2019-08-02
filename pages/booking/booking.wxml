@@ -10,7 +10,7 @@
       
       <view class="card-product-infos">
         <view class="h2">Upcoming\n</view>
-        <view class="h3">Technique Turntable\nDec 28th 2019\n</view>
+        <view class="h3">My Piano Lesson\nDec 28th 2019\n</view>
         <view class="p">by YK DJ BOY</view>
       </view>
        <image class="avatar-bordered" src="/images/pro2.jpeg">  

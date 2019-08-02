@@ -21,11 +21,9 @@ margin-top: 40px;
   margin:20px;
 }
 .profile-photo {
-position: relative;
+position: absolute;
 width: 99px;
 height: 99px;
-/* left: 20px;
-top: 30px; */
 border-radius: 100%;
 background-color: green;
 z-index: -1;

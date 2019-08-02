@@ -68,7 +68,7 @@ Page({
     })
   },
 
-  bindSubmit: function (e) {
+bindSubmit: function (e) {
     let id = this.data.userId
     let name = this.data.name
     let description = this.data.description
@@ -87,5 +87,5 @@ Page({
         })
       }
     })
-  },
+  }
 })

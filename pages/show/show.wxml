@@ -51,7 +51,7 @@
 
 <!-- Date picker -->
 <view class="description">
-<view class="h3">Available Time</view>
+<view class="h3">Book a Slot</view>
   <picker mode="date" value="" start="2019-08-01" end="2019-11-01" bindchange="bindDateChange">
     <view class="picker">
       Choose Date {{date}}

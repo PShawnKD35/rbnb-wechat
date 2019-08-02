@@ -30,32 +30,23 @@ Page({
     let newItem = {
       name: this.data.name,
       description: this.data.description,
-      user_id: app.globalData.userId,
     }
-// fill in when route for item creation is done
-    // submitNewItem(e){
-    //   console.log(this.data.name)
-    //   let newItem = {
-    //     name: this.data.name,
-    //     description: this.data.description,
-    //     user_id: app.globalData.userId,
-    //   }
 
-    //   wx.request({
-    //     url: `${app.globalData.url}users/${app.globalData.userId}/services`,
-    //     method: 'POST',
-    //     data: newItem,
-    //     success: function (res) {
-    //       wx.navigateTo({
-    //         url: "additem",
-    //       })
-    //       wx.showToast({
-    //         title: `this.data.name added!`,
-    //         icon: 'none'
-    //       });
-    //     }
-    //   })
+    wx.request({
+      url: `${app.globalData.url}users/${app.globalData.userId}/services`,
+      method: 'POST',
+      data: newItem,
+      success: function (res) {
+        wx.navigateTo({
+          url: `/pages/explore/explore`
+        })
+        wx.showToast({
+          title: `this.data.name added!`,
+          icon: 'none'
+        });
+      }
+    })
 
-    // },
+
   }
 })

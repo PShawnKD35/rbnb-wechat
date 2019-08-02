@@ -23,19 +23,26 @@
       </view>
       <view class="section__title">Email</view>
       <view class="content">
-        <input class="input" bindinput="userEmail" placeholder="so we can reach out" name="email" value="{{user.email}}" />
+        <input class="input" bindinput="userEmail" placeholder="So we can reach out" name="email" value="{{user.email}}" />
       </view>
-    </view>
+       <view class="section__title">Password</view>
+      <view class="content">
+        <input class="input" bindinput="userPassword" password placeholder="It's a secret between us" name="password" value="{{user.password}}" />
+      </view>
     <view class="btn-area">
       <wux-button block round size="default" type="royal" bindtap="bindSubmit" formType="submit" >Register</wux-button>
+    </view>
     </view>
     </form>
   </block>
 <block wx:else>
-  <view>Name: {{user.name}}</view>
-  <view>Email: {{user.email}}</view>
-  <view>Description: {{user.description}}</view>
-  <button bindtap="bindViewTap" >Be a Shifu!</button>
+
+
+  <view class="section__title">Name: {{user.name}}</view>
+  <view class="section__title">Email: {{user.email}}</view>
+  <view class="section__title">Description: {{user.description}}</view>
+
+   <button class="button" bindtap="bindViewTap"><text>Be a Shifu!</text></button>
 </block>
 </view>
 </view>

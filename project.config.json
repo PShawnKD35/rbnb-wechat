@@ -48,6 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
+
 			"current": 9,
 			"list": [
 				{
@@ -61,13 +62,6 @@
 					"id": -1,
 					"name": "pages/show/show",
 					"pathName": "pages/show/show",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 3,
-					"name": "pages/search_services/search_services",
-					"pathName": "pages/search_services/search_services",
 					"query": "",
 					"scene": null
 				},

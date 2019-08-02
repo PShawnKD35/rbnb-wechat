@@ -10,12 +10,14 @@ Page({
     email: "",
     user: {}
   },
+
   bindViewTap: function () {
     wx.navigateTo({
       url: `/pages/addservice/addservice`
     })
   },
   onLoad: function () {
+    console.log("loading")
     let userId = app.globalData.userId
     const page = this
     page.setData({ userId: userId })
@@ -23,10 +25,9 @@ Page({
       url: `${app.globalData.url}users/${userId}`,
       method: 'GET',
       success(res) {
-        console.log(res.data.user)
         let user = res.data.user
         page.setData({ user: user })
-        if (res.data.email != null) {
+        if (res.data.user.email != null) {
           page.setData({ hasRegistered: true })
         }
       }
@@ -67,26 +68,24 @@ Page({
     })
   },
 
-  bindSubmit: function (e) {
+bindSubmit: function (e) {
     let id = this.data.userId
     let name = this.data.name
     let description = this.data.description
     let email = this.data.email
     let user = { name: name, description: description, email: email }
+    this.setData({user: user, })
     console.log(user)
-
-    this.setData({user: user})
-
     wx.request({
       url: `${app.globalData.url}users/${id}`,
       method: 'PUT',
       data: user,
       success: function (res) {
         console.log(res)
-        wx.reLaunch({
+        wx.navigateTo ({
           url: '/pages/profile/profile',
         })
       }
     })
-  },
+  }
 })

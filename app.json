@@ -10,18 +10,18 @@
     "pages/availableservice/availableservice",
     "pages/profile/profile",
     "pages/addservice/addservice",
-    "pages/additem/additem"
+    "pages/addservice/additem"
   
   ],
   "window": {
-    "backgroundTextStyle": "dark",
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#5744CC",
     "navigationBarTitleText": "试乎",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "backgroundColor": "white",
-    "borderStyle": "black",
+    "borderStyle": "white",
     "selectedColor": "#5744CC",
     "color": "#white",
     "list": [

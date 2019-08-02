@@ -1,49 +1,54 @@
-// pages/availableservice/availableservice.js
+const app = getApp()
+const year = new Date().getFullYear()
+const month = new Date().getMonth() + 1
+const day = new Date().getDate()
+const hour = new Date().getHours() + 1
+
 Page({
-
-  /**
-   * Page initial data
-   */
   data: {
-    minHour: 10,
-    maxHour: 20,
-    minDate: new Date().getTime(),
-    maxDate: new Date(2019, 10, 1).getTime(),
-    currentDate: new Date().getTime()
+    today: `${year}-${month}-${day}`,
+    todayAndThreeMonths: `${year}-${month + 3}-${day}`,
+    startTime: "",
+    date: `${year}-${month}-${day}`,
+    endTime: ""
   },
-  onChange(event) {
+
+  bindStartTimeChange(e) {
+    let { value } = e.detail;
+    console.log("startTime:", value);
     this.setData({
-      currentDate: event.detail.value
-    });
+      startTime: value
+    })
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
-  onLoad: function (options) {
-
+  bindEndTimeChange(e) {
+    let { value } = e.detail;
+    console.log("time:", value);
+    this.setData({
+      endTime: value
+    })
   },
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function () {
-
+  bindDateChange(e) {
+    let { value } = e.detail;
+    this.setData({
+      date: value
+    })
   },
 
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
+  submitNewAvaliableTime(e) {
+    let start_time = `${this.data.date}T${this.data.startTime}:00+08:00`
+    let end_time = `${this.data.date}T${this.data.endTime}:00+08:00`
+    console.log(start_time)
+    console.log(end_time)
+  }
 
-  },
-
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
-  },
+  // wx.request({
+  //   let start_time = `${date} ${startTime}:00+08:00`
+  //   let end_time = `${date} ${endTime}:00+08:00`
+  //   url: `app.globalData.url`,
+  //   method: 'POST',
+  //   data: {start_time: start_time, end_time: end_time}
+  // })
 
 })

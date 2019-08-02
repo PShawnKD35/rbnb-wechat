@@ -3,7 +3,9 @@ const app = getApp()
 Page({
   data: {
     markers: [],
-    allServices :{}
+    allServices : {},
+    longitude: '',
+    latitude: ''
   },
   // for the sliding tabs
   // filter by catagory and updating data
@@ -32,6 +34,7 @@ Page({
       this.setData({
         services: services
       })
+      this.setMarker(services)
     }
   },
 
@@ -44,6 +47,7 @@ Page({
     services.forEach(function (service) {
       markers.push(
         {
+          title: "sdfssssssssssss",
           iconPath: "../img/marker.png",
           width: 30,
           height: 30,
@@ -114,4 +118,5 @@ Page({
       }
     })
   },
+  
 })

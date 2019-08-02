@@ -1,8 +1,8 @@
 /* pages/profile/profile.wxss */
-.section{
+/* .section{
   padding: 20rpx;
   border-bottom: 1px solid #aaaaaa;
-}
+} */
 
 .userinfo {
   display: flex;

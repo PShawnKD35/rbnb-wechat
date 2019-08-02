@@ -1,2 +1,31 @@
 <!--pages/addservice/addservice.wxml-->
-<text>pages/addservice/addservice.wxml</text>
+<view>Be a Shifu!</view>
+
+<!-- Service enty -->
+  <view class="section__title">Describe your skill in 10 words.</view>
+  <input bindinput="serviceName" name="serviceName" maxlength="30" placeholder="Enter service name" />
+
+  <view class="section__title">What can you teach to the beginners?</view>
+  <input  bindinput="serviceDescription" name="serviceDescription" maxlength="60" placeholder="Enter service decription" />
+
+    <view class="section__title">How much would you like to charge per hour?</view>
+  <input type="number" bindinput="serviceCharge" name="serviceCharge" maxlength="4" placeholder="e.g. 200" />
+
+  <view class="section__title">Address</view>
+  <input  bindinput="serviceAddress" name="serviceDescription" maxlength="60" placeholder="Enter service decription" />
+
+  <view class="section__title">Choose a category for your service</view>
+  <radio-group class="radio-group" bindchange="radioChange">
+  <label class="radio" wx:for="{{items}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</radio-group>
+  <button bindtap="submitNewService">Go Shifu!</button>
+
+
+
+<!-- input field for name, description, address, charge -->
+<!-- radio button for category -->
+<!-- https://developers.weixin.qq.com/miniprogram/dev/component/picker.html -->
+
+

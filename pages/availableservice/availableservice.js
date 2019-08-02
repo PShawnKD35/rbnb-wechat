@@ -39,33 +39,41 @@ Page({
     })
   },
 
-  onLoad: function(e) {
-    let userId = app.globalData.userId
-    const page = this
-    page.setData({ userId: userId })
-    console.log(userId)
-    // wx.request({
-    //   url: `${app.globalData.url}users/${app.globalData.userId}`,
-    //   method: 'GET',
-    //   success(res) {
-    //     console.log(res)
-    //   }
-    // })
+  onLoad: function (options) {
+    let page = this
+    wx.request({
+      url: `${app.globalData.url}users/${app.globalData.userId}`,
+      method: "GET",
+      success(res) {
+        console.log(res.data.service.id)
+        page.setData({
+          serviceId: res.data.service.id
+        })
+      }
+    })
+
   },
 
+
   submitNewAvaliableTime(e) {
-    let start_time = `${this.data.date} ${this.data.startTime}:00+08:00`
-    let end_time = `${this.data.date} ${this.data.endTime}:00+08:00`
-    console.log(start_time)
-    console.log(end_time)
+    let start_time = this.data.startTime
+    let end_time = this.data.endTime
+    let date = this.data.date
+    let serviceId = this.data.serviceId
+    wx.request({
+      url: `${app.globalData.url}services/${this.data.serviceId}/available_services`,
+      method: 'POST',
+      data: { date: date, start_time: start_time, end_time: end_time },
+      success: function(res) {
+        console.log(res)
+        wx.redirectTo({
+          url: `/pages/show/show?id=${serviceId}`,
+        })
+        wx.showToast({
+          title: `${page.data.name} added!`,
+          icon: 'none'
+        });
+      }
+    })
   }
-
-  // wx.request({
-  //   let start_time = `${date} ${startTime}:00+08:00`
-  //   let end_time = `${date} ${endTime}:00+08:00`
-  //   url: `${app.globalData.url}`,
-  //   method: 'POST',
-  //   data: {start_time: start_time, end_time: end_time}
-  // })
-
 })

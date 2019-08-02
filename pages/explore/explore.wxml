@@ -50,7 +50,7 @@ active="{{ active }}">
   
   </view>
   <view >
-  <image class="image" src="/images/ebat5.jpg">  
+  <image class="image" src="{{service.remote_photo_url}}">  
     </image></view>
      
 </view>

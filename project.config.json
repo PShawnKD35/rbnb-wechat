@@ -114,9 +114,9 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "item",
-					"pathName": "pages/additem/additem",
+					"id": 9,
+					"name": "pages/addservice/additem",
+					"pathName": "pages/addservice/additem",
 					"query": "",
 					"scene": null
 				}

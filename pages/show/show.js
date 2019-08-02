@@ -29,8 +29,9 @@ Page({
       method: 'GET',
       success(res) {
         page.setData({
-        service: res.data.service,
-        item: res.data.service.items[0]});
+          service: res.data.service,
+          item: res.data.service.items[0]
+        });
         wx.hideToast();
       }
     });

@@ -1,3 +1,63 @@
+
+ <view class="purple">
+ <view class="title">
+ Profile Page</view>
+<view class="user-info">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
+    
+  <view></view>
+  <block wx:if="{{!hasRegistered}}">
+          <!-- form for user register -->
+        <form bindsubmit="formSubmit" bindreset="formReset" class="form">
+        <view class="avatar-click">
+         <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> <text class="instruction">Click for Avatar!</text></button>
+              
+        </view>
+             
+          <view class="form-group">
+            <view class="section__title">Name</view>
+            <view class="content">
+            <input class="input" name="name" value="{{user.name}}" placeholder="give us your name"/>
+            </view>
+
+            <view class="section__title">Description</view>
+            <view class="content">
+            <input class="input" name="description" placeholder="Tell us more"value="{{user.description}}" />
+            </view>
+
+            <view class="section__title">Email</view>
+            <view class="content">
+            <input class="input" placeholder="so we can reach out" name="email" value="{{user.email}}" />
+            </view>
+          </view>
+
+          <radio-group class="radio-group">
+          <label><radio value="radio1"/><text class="radios">Music</text></label>
+          <label><radio value="radio2"/><text     class="radios">Art</text></label>
+          <label><radio value="radio2"/><text class="radios">Tech\n</text></label>
+          <label><radio value="radio2"/><text class="radios">Outdoor</text></label>
+          <label><radio value="radio2"/><text class="radios">Driving</text></label>
+          <label><radio value="radio2"/><text class="radios">Pet</text></label>
+          </radio-group>
+
+
+
+          <view class="btn-area">
+<wux-button block size="default" type="light"  formType="submit" ><wux-icon type="ios-save" size="18" /> Register</wux-button>
+          </view>
+        </form>
+</block>
+
+
+    <block wx:else>
+
+      <view>Name: {{user.name}}</view>
+      <view>Email: {{user.email}}</view>
+      <view>Description: {{user.description}}</view>
+
+<view>Be a Shifu!</view>
 <view class="section">
   <picker mode="date" value="" start="2019-08-01" end="2019-11-01" bindchange="bindDateChange">
     <view class="picker">
@@ -7,9 +67,16 @@
 </view>
 
 <view class="section">
-  <picker mode="time" value="" start="09:01" end="21:01" bindchange="bindTimeChange">
+
+  <picker mode="time" value="" start="06:00" end="21:00" bindchange="bindTimeChange">
     <view class="picker">
-      Choose Time: {{time}}
+      Start Time: {{time}}
     </view>
+<!-- input field for name, description, address, charge -->
+<!-- radio button for category -->
+<!-- https://developers.weixin.qq.com/miniprogram/dev/component/picker.html -->
   </picker>
+</view>
+</block>
+
 </view>

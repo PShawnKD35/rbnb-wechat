@@ -14,7 +14,8 @@
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#5744CC",
-    "navigationBarTitleText": "试乎 TryIT",
+    "navigationBarTitleText": "试乎 TryIt",
+
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
@@ -37,7 +38,7 @@
         "selectedIconPath": "/images/open-book.png"
       },
       {
-        "pagePath": "pages/home/home",
+        "pagePath": "pages/profile/profile",
         "text": "My Profile",
         "iconPath": "/images/home.png",
         "selectedIconPath": "/images/home-2.png"

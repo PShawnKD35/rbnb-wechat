@@ -3,3 +3,91 @@
   padding: 20rpx;
   border-bottom: 1px solid #aaaaaa;
 }
+.purple {
+  margin-top: 30px;
+  border-radius: 20px;
+ background: linear-gradient(162.63deg, #5744CC 5.14%, rgba(13, 24, 122, 0.69) 39.43%, #938CE7 93.69%);
+  background-position: center;
+    opacity: 0.9;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.user-info {
+  margin:30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.avatar-click {
+  text-align:center;
+  margin-left:100px;
+  margin-right:100px;
+  border-radius: 20px;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+.instruction {
+  color:darkgray;
+  font-size: 16px;
+
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.form-group {
+  margin:20px;
+}
+
+
+.title{
+  padding-top:24px;
+  text-align: center;
+   font-size: 18px;
+  font-weight: bold;
+  color:white;
+
+}
+
+.section__title{
+  margin-left:10px;
+   font-size: 18px;
+  color:white;
+  padding:10px;
+
+}
+
+ .input {
+  margin-left:20px;
+}
+.content {
+  background:white;
+  padding:15px;
+  border-radius: 20px;
+  border-bottom: 1px solid darkgrey;
+}
+
+.radio-group {
+text-align: center;
+  margin:30px;
+}
+.radios {
+  padding-right:10px;
+  padding-bottom: 15px;
+   font-size: 16px;
+  font-style: italic;
+  color:white;
+
+}

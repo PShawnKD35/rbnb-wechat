@@ -14,7 +14,7 @@ Page({
       title: `Switched to ${event.detail.title}`,
       icon: 'none'
     });
-    services.forEach(function(service) {
+    services.forEach(function (service) {
       if (service.catagory = catagory) {
         fifilteredServices.push(service)
       }
@@ -47,7 +47,7 @@ Page({
       markers: markers
     })
   },
-  
+
   onLoad: function (options) {
     let page = this
     const url = app.globalData.url
@@ -78,7 +78,7 @@ Page({
       }
     })
   },
-  
+
   goToService: function (event) {
     let id = event.currentTarget.dataset.id
     wx.navigateTo({
@@ -86,14 +86,14 @@ Page({
     })
   },
 
-// not fetching data after search
+  // not fetching data after search
   onSearch: function (event) {
     let page = this
     let searchKeyword = event.detail
     wx.request({
       url: `${app.globalData.url}services/search?item_name=${searchKeyword}`,
       method: 'GET',
-      success(res){
+      success(res) {
         console.log(res)
         const services = res.data
         page.setMarker(services)

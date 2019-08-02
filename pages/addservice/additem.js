@@ -46,8 +46,8 @@ Page({
       data: {item : {name: page.data.name, description: page.data.description}},
       success: function (res) {
         console.log(res)
-        wx.switchTab({
-          url: '/pages/explore/explore',
+        wx.redirectTo({
+          url: '/pages/availableservice/availableservice',
         })
         wx.showToast({
           title: `${page.data.name} added!`,

@@ -1,40 +1,58 @@
 /* pages/availableservice/availableservice.wxss */
-.purple{
-  margin-top: 30px;
-  border-top-left-radius:20px;
-  border-top-right-radius:20px;
-  background: linear-gradient(162.63deg, #5744CC 5.14%, rgba(13, 24, 122, 0.69) 39.43%, #938CE7 93.69%);
-  background-position: center;
-  opacity: 0.9;
-  width: 100%;
-  height: 100%;
+ .purple {
+  background-color:#5744CC;
+  height: 100px;
+  position:relative;
   z-index: -1;
 }
 
+.white {
+border-radius: 20px;
+position: relative;
+height: 100px;
+background-color: white;
+margin-top: 40px;
+
+}
+
 .title{
-  padding-top:24px;
-  text-align: center;
-   font-size: 18px;
-  font-weight: bold;
-  color:white;
+font-size: 26px;
+text-align: center;
+color:white;
+z-index: 1; 
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} 
 
+
+
+.form-group {
+  padding:20px;
 }
 
-.chooseTime {
-  margin:20px;
-  text-align: center;
-  opacity:0.7;
+
+.button{
+  margin:30px;
+  background-color:#5744CC;
+  border: 1px solid #5744CC;
+  opacity:0.9;
 }
 
-.picker {
+.button text{
+  color: white;
+}
+
+.content {
   background:white;
   padding:15px;
   border-radius: 20px;
-  border-bottom: 1px solid darkgrey;
-
+  border: 1px solid #5744CC;
+  height:20px;
 }
 
-.btn{
-  border-radius: 20px;
-  margin:30px;
+.section__title{
+  margin-left:10px;
+   font-size: 18px;
+  color:#5744CC;
+  padding:10px;
+
 }

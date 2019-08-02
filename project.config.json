@@ -48,15 +48,8 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 8,
 			"list": [
-				{
-					"id": 0,
-					"name": "Add item",
-					"pathName": "pages/addservice/additem",
-					"query": "",
-					"scene": null
-				},
 				{
 					"id": -1,
 					"name": "pages/explore/explore",
@@ -107,9 +100,16 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "add service",
+					"id": 8,
+					"name": "pages/addservice/addservice",
 					"pathName": "pages/addservice/addservice",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/addservice/additem",
+					"pathName": "pages/addservice/additem",
 					"query": "",
 					"scene": null
 				}

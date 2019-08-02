@@ -38,6 +38,13 @@ Page({
     }
   },
 
+  calloutTap(e) {
+    let id = e.markerId
+    wx.navigateTo({
+      url: `/pages/show/show?id=${id}`,
+    })
+  },
+
   setMarker(services) {
     let page = this
     page.setData({
@@ -47,13 +54,21 @@ Page({
     services.forEach(function (service) {
       markers.push(
         {
-          title: "sdfssssssssssss",
           iconPath: "../img/marker.png",
           width: 30,
           height: 30,
           latitude: service.latitude,
           longitude: service.longitude,
-          id: service.id
+          id: service.id,
+          callout: {
+            content: `${service.name}`,
+            display: 'ALWAYS',
+            color: 'black',
+            bgColor: 'white',
+            fontSize: '12',
+            borderRadius: '15px',
+            padding: '7px',
+          }
         }
       )
     });

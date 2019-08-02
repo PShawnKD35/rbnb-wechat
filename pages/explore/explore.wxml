@@ -18,7 +18,7 @@
     controls="{{controls}}" 
     bindcontroltap="controltap" 
     markers="{{markers}}" 
-    bindmarkertap="markertap 
+    bindcallouttap="calloutTap"
     polyline="{{polyline}}" 
     bindregionchange="regionchange" 
     show-location style="width: 100%; height: 530px;">

@@ -1,11 +1,14 @@
 /* pages/profile/profile.wxss */
-/* .section{
+ .section{
   padding: 20rpx;
   border-bottom: 1px solid #aaaaaa;
+ }
 
 .purple {
   margin-top: 30px;
-  border-radius: 20px;
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
+
  background: linear-gradient(162.63deg, #5744CC 5.14%, rgba(13, 24, 122, 0.69) 39.43%, #938CE7 93.69%);
   background-position: center;
     opacity: 0.9;

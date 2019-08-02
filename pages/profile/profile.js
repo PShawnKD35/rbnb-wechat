@@ -10,7 +10,6 @@ Page({
     hasRegistered: false,
     user: ""
   },
-
   onLoad: function () {
     let userId = app.globalData.userId
     const page = this
@@ -18,40 +17,35 @@ Page({
     wx.request({
       url: `${app.globalData.url}users/${userId}`,
       method: 'GET',
-      success(res){
+      success(res) {
         let user = res.data
-        page.setData({user : user},
+        page.setData({ user: user })
         if (res.data.email != null) {
           page.setData({ hasRegistered: true })
         }
       }
     })
-    if(app.globalData.userInfo) {
+    if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
     }
-
-
   },
-
   bindTimeChange(e) {
-  let { value } = e.detail;
-  console.log("time:", value);
-  this.setData({
-    time: value
-  })
-},
-
-bindDateChange(e) {
-  let { value } = e.detail;
-  console.log("date:", value);
-  this.setData({
-    date: value
-  })
-},
-
+    let { value } = e.detail;
+    console.log("time:", value);
+    this.setData({
+      time: value
+    })
+  },
+  bindDateChange(e) {
+    let { value } = e.detail;
+    console.log("date:", value);
+    this.setData({
+      date: value
+    })
+  },
   getUserInfo: function (e) {
     app.globalData.userInfo = e.detail.userInfo
     // wx.request({
@@ -64,13 +58,12 @@ bindDateChange(e) {
       userInfo: app.globalData.userInfo
     })
   },
-
   formSubmit: function (e) {
     let id = this.data.userId
     let name = e.detail.value.name
     let description = e.detail.value.description
     let email = e.detail.value.email
-    let user = { name: name, description: description, email: email }    
+    let user = { name: name, description: description, email: email }
     wx.request({
       url: `${app.globalData.url}users/${id}`,
       method: 'PUT',
@@ -83,7 +76,4 @@ bindDateChange(e) {
       }
     })
   },
-
-
 })
-

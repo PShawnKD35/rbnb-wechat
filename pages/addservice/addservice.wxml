@@ -1,28 +1,46 @@
 <!--pages/addservice/addservice.wxml-->
-<view>Be a Shifu!</view>
-
+ <view class="purple">
+ <view class="title">Master of Craft? Be a Shifu!</view>
+     <view class="white">
+      
 <!-- Service enty -->
-  <view class="section__title">Describe your skill in 10 words.</view>
-  <input bindinput="serviceName" name="serviceName" maxlength="30" placeholder="Enter service name" />
+<view class="form-group">
+ <view class="section__title">Descr ibe your skill in 10 words.</view>
+   <view class="content">
+    <input bindinput="serviceName" name="serviceName" maxlength="30" placeholder="Enter service name" />
+    </view>
+     
 
-  <view class="section__title">What can you teach to the beginners?</view>
-  <input  bindinput="serviceDescription" name="serviceDescription" maxlength="60" placeholder="Enter service decription" />
+      <view class="section__title">What can you teach to the beginners?</view>
+        <view class="content">
+        <input  bindinput="serviceDescription" name="serviceDescription" maxlength="60" placeholder="Enter service decription" />
+        </view>
 
-    <view class="section__title">How much would you like to charge per hour?</view>
-  <input type="number" bindinput="serviceCharge" name="serviceCharge" maxlength="4" placeholder="e.g. 200" />
+        <view class="section__title">How much would you like to charge per hour?</view>
+          <view class="content">
+      <input type="number" bindinput="serviceCharge" name="serviceCharge" maxlength="4" placeholder="e.g. 200" />
+      </view>
 
-  <view class="section__title">Address</view>
-  <input  bindinput="serviceAddress" name="serviceDescription" maxlength="60" placeholder="Enter service decription" />
+      <view class="section__title">Address</view>
+      <view class="content">
+      <input  bindinput="serviceAddress" name="serviceDescription" maxlength="60" placeholder="Enter service decription" />
+      </view>
 
-  <view class="section__title">Choose a category for your service</view>
-  <radio-group class="radio-group" bindchange="radioChange">
-  <label class="radio" wx:for="{{items}}">
-    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
-  </label>
-</radio-group>
-  <button bindtap="submitNewService">Go Shifu!</button>
-
-
+      <view class="section__title">Choose a category for your service</view>
+      <view class="radios">
+      <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio" wx:for="{{items}}">
+        <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
+    </radio-group>
+    </view>
+     <view class="btn-area">
+      <wux-button block round size="default" type="royal" bindtap="submitNewService"formType="submit" >Go Shifu!</wux-button>
+    </view>
+  </view>
+</view>
+</view>
+     
 
 <!-- input field for name, description, address, charge -->
 <!-- radio button for category -->

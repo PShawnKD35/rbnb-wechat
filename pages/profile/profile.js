@@ -74,7 +74,9 @@ Page({
     let email = this.data.email
     let user = { name: name, description: description, email: email }
     console.log(user)
+
     this.setData({user: user})
+
     wx.request({
       url: `${app.globalData.url}users/${id}`,
       method: 'PUT',

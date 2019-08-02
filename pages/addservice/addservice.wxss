@@ -1,1 +1,48 @@
 /* pages/addservice/addservice.wxss */
+ .purple {
+  background-color:#5744CC;
+  height: 100px;
+  position:relative;
+  z-index: -1;
+}
+
+.white {
+border-radius: 20px;
+position: relative;
+height: 100px;
+background-color: white;
+margin-top: 40px;
+}
+
+.title{
+font-size: 26px;
+text-align: center;
+color:white;
+z-index: 1; 
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} 
+
+.section__title{
+  margin-left:10px;
+   font-size: 18px;
+  color:#5744CC;
+  padding:10px;
+
+}
+
+.form-group {
+  padding:20px;
+}
+
+.content {
+  background:white;
+  padding:15px;
+  border-radius: 20px;
+  border: 1px solid #5744CC;
+}
+
+.radios {
+  background:white;
+  padding:15px;
+  border-radius: 20px;
+}

@@ -18,13 +18,13 @@ Page({
         title: `Switched to ${event.detail.title}`,
         icon: 'none'
       });
-      services.forEach(
-        function (service) {
-          if (service.category == category) {
-            fifilteredServices.push(service)
-          }
-        }
-      );
+      // services.forEach(
+      //   function (service) {
+      //     if (service.category == category) {
+      //       fifilteredServices.push(service)
+      //     }
+      //   }
+      // );
       this.setMarker(fifilteredServices)
       this.setData({
         services: fifilteredServices

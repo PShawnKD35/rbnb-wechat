@@ -69,10 +69,11 @@
       </view>
   </view> --> 
 
-
-
-
 <!-- Booking: booking confirmation submition button -->
+<view class="confirm">
+ <wux-button block outline type="royal"  >9:00 ~ 10:00</wux-button>
+</view>
+
 <view class="confirm">
  <wux-button block outline type="royal" bindtap="goToConfirm" >Confirm</wux-button>
 </view>

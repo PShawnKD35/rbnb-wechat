@@ -1,8 +1,8 @@
 /* pages/profile/profile.wxss */
-.section{
+/* .section{
   padding: 20rpx;
   border-bottom: 1px solid #aaaaaa;
-}
+
 .purple {
   margin-top: 30px;
   border-radius: 20px;
@@ -24,6 +24,7 @@
 .userinfo-avatar {
   width: 128rpx;
   height: 128rpx;
+
   text-align: center;
   border-radius: 50%;
 }
@@ -89,5 +90,4 @@ text-align: center;
    font-size: 16px;
   font-style: italic;
   color:white;
-
 }

@@ -51,9 +51,9 @@
 			"current": 8,
 			"list": [
 				{
-					"id": -1,
-					"name": "pages/home/home",
-					"pathName": "pages/home/home",
+					"id": 0,
+					"name": "Add item",
+					"pathName": "pages/addservice/additem",
 					"query": "",
 					"scene": null
 				},
@@ -108,8 +108,9 @@
 				},
 				{
 					"id": -1,
-					"name": "pages/profile/profile",
-					"pathName": "pages/profile/profile",
+					"name": "add service",
+					"pathName": "pages/addservice/addservice",
+					"query": "",
 					"scene": null
 				}
 			]

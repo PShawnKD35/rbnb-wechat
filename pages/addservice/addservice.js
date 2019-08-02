@@ -1,0 +1,111 @@
+// pages/addservice/addservice.js
+
+Page({
+
+  /**
+   * Page initial data
+   */
+  data: {
+
+    name: "",
+    description: "",
+    address: "",
+    charge: 0,
+    category: "",
+    items: [
+      { name: 'Music', value: 'Music' },
+      { name: 'Outdoor', value: 'Outdoor', checked: 'true' },
+      { name: 'Art', value: 'Art' },
+      { name: 'Tech', value: 'Tech' },
+      { name: 'Driving', value: 'Driving' },
+      { name: 'Pet', value: 'Pet' },
+      { name: 'DIY', value: 'DIY' },
+    ]
+  },
+
+  /**
+   * Lifecycle function--Called when page load
+   */
+  onLoad: function (options) {
+
+  },
+
+  serviceName(e) {
+    this.setData({
+      name: e.detail.value
+    })
+  },
+
+  serviceCharge(e){
+    this.setData({
+      charge: e.detail.value
+    })
+  },
+
+  serviceDescription(e){
+    this.setData({
+      description: e.detail.value
+    })
+  },
+
+  serviceAddress(e) {
+    this.setData({
+      address: e.detail.value
+    })
+  },
+
+  submitNewService(e){
+    let newService = {
+      name: this.data.name,
+      description: this.data.description,
+      address: this.data.address,
+      charge: this.data.charge,
+      category: this.data.category,
+      user_id: app.globalData.userId,
+    }
+
+    wx.request({
+      url: `${app.globalData.url}users/${app.globalData.userId}/services`,
+      method: 'POST',
+      data: newService,
+      success: function(res){
+        wx.navigateTo({
+          url: "additem",
+        })
+        wx.showToast({
+          title: `Now add your items!`,
+          icon: 'none'
+        });
+      }
+    })
+
+  },
+
+  radioChange: function (e) {
+    this.setData({
+      category: e.detail.value
+    })
+  },
+
+  bindStartTimeChange(e) {
+    let { value } = e.detail;
+    this.setData({
+      startTime: value
+    })
+  },
+
+  bindEndTimeChange(e) {
+    let { value } = e.detail;
+    this.setData({
+      endTime: value
+    })
+  },
+
+  bindDateChange(e) {
+    let { value } = e.detail;
+    console.log("date:", value);
+    this.setData({
+      date: value
+    })
+  }
+})

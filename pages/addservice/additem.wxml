@@ -1,0 +1,7 @@
+<!--pages/additem/additem.wxml-->
+  <view class="section__title">Item Name</view>
+  <input bindinput="itemName" name="itemName" maxlength="30" placeholder="Enter item name" />
+
+  <view class="section__title">Item description</view>
+  <input  bindinput="itemDescription" name="itemDescription" maxlength="60" placeholder="Enter item decription" />
+  <button bindtap="submitNewItem">Add item!</button>

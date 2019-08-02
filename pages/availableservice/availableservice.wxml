@@ -1,27 +1,20 @@
 <!--pages/availableservice/availableservice.wxml-->
-<text>pages/availableservice/availableservice.wxml</text>
-<van-datetime-picker
-  title="Start Time"
-  type="datetime"
-  value="{{ currentDate }}"
-  min-date="{{ minDate }}"
-  max-date="{{ maxDate }}"
-  bind:change="onChange"
-  cancel-button-text="Cancel"
-  confirm-button-text="Confirm"
-  item-height="35"
-  visible-item-count="3"  
-/>
+  <view class="section__title">Add Avaliable Time for your service and item</view>
+  <picker mode="date" value="{{today}}" start="{{today}}" end="{{todayAndThreeMonths}}" bindchange="bindDateChange">
+    <view class="picker">
+      Date: {{date}}
+    </view>
+  </picker>
 
-<van-datetime-picker
-  title="End Time"
-  type="datetime"
-  value="{{ currentDate }}"
-  min-date="{{ minDate }}"
-  max-date="{{ maxDate }}"
-  bind:change="onChange"
-  cancel-button-text="Cancel"
-  confirm-button-text="Confirm"
-  item-height="35"
-  visible-item-count="3"  
-/>
+  <picker mode="time" value="{{startTime}}" start="06" end="21" bindchange="bindStartTimeChange">
+    <view class="picker">
+      Start Time: {{startTime}}
+    </view>
+  </picker>
+  <picker mode="time" value="" start="06:00" end="23:00" bindchange="bindEndTimeChange">
+    <view class="picker">
+      End Time: {{endTime}}
+    </view>
+  </picker>
+
+  <button bindtap="submitNewAvaliableTime">Add time slot</button>

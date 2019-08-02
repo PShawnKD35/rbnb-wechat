@@ -8,11 +8,13 @@
     "pages/booking/booking",
     "pages/confirmation/confirmation",
     "pages/availableservice/availableservice",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/addservice/addservice",
+    "pages/addservice/additem"
   
   ],
   "window": {
-    "backgroundTextStyle": "dark",
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#5744CC",
     "navigationBarTitleText": "试乎 TryIt",
 
@@ -20,7 +22,7 @@
   },
   "tabBar": {
     "backgroundColor": "white",
-    "borderStyle": "black",
+    "borderStyle": "white",
     "selectedColor": "#5744CC",
     "color": "#white",
     "list": [

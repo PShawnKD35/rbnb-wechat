@@ -3,25 +3,45 @@ const app = getApp()
 Page({
   data: {
     markers: [],
+    allServices : {},
+    longitude: '',
+    latitude: ''
   },
   // for the sliding tabs
   // filter by catagory and updating data
   onChange(event) {
-    const catagory = event.detail.title
-    const services = this.data.services
-    const fifilteredServices = []
-    wx.showToast({
-      title: `Switched to ${event.detail.title}`,
-      icon: 'none'
-    });
-    services.forEach(function (service) {
-      if (service.catagory = catagory) {
-        fifilteredServices.push(service)
-      }
-    });
-    this.setMarker(fifilteredServices)
-    this.setData({
-      services: fifilteredServices
+    const category = event.detail.title
+    const services = this.data.allServices
+    if (category != "All"){
+      const fifilteredServices = []
+      wx.showToast({
+        title: `Switched to ${event.detail.title}`,
+        icon: 'none'
+      });
+      services.forEach(
+        function (service) {
+          if (service.category == category) {
+            fifilteredServices.push(service)
+          }
+        }
+      );
+      this.setMarker(fifilteredServices)
+      this.setData({
+        services: fifilteredServices
+      })
+    }
+    else {
+      this.setData({
+        services: services
+      })
+      this.setMarker(services)
+    }
+  },
+
+  calloutTap(e) {
+    let id = e.markerId
+    wx.navigateTo({
+      url: `/pages/show/show?id=${id}`,
     })
   },
 
@@ -39,7 +59,16 @@ Page({
           height: 30,
           latitude: service.latitude,
           longitude: service.longitude,
-          id: service.id
+          id: service.id,
+          callout: {
+            content: `${service.name}`,
+            display: 'ALWAYS',
+            color: 'black',
+            bgColor: 'white',
+            fontSize: '12',
+            borderRadius: '15px',
+            padding: '7px',
+          }
         }
       )
     });
@@ -62,6 +91,7 @@ Page({
         const services = res.data
         page.setData({
           services: services,
+          allServices: services
         });
         page.setMarker(services);
         wx.hideToast();
@@ -103,4 +133,5 @@ Page({
       }
     })
   },
+  
 })

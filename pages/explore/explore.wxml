@@ -31,10 +31,10 @@ color="#5744CC"
 bind:change="onChange" 
 active="{{ active }}">
   <van-tab title="All"></van-tab>
-  <van-tab title="Music"></van-tab>
-  <van-tab title="Art"></van-tab>
   <van-tab title="Outdoor"></van-tab>
+  <van-tab title="Music"></van-tab>
   <van-tab title="Driving"></van-tab>
+  <van-tab title="Art"></van-tab>
   <van-tab title="Pet"></van-tab>
   <van-tab title="DIY"></van-tab>
 </van-tabs>

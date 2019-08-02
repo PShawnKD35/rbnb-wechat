@@ -8,6 +8,7 @@ Page({
 
   },
 
+
   /**
    * Lifecycle function--Called when page load
    */
@@ -53,8 +54,10 @@ Page({
   /**
    * Called when page reach bottom
    */
-  onReachBottom: function () {
-
+  goToBooking: function () {
+    wx.reLaunch({
+      url: `/pages/booking/booking`
+    })
   },
 
   /**

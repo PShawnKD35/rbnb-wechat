@@ -28,7 +28,7 @@ Page({
     this.setData({ UserInfo: getApp().globalData.userInfo })
     wx.request({
       url: `${app.globalData.url}services/${options.id}`,
-      method: 'GET',
+      method: 'POST',
       success(res) {
         page.setData({
           service: res.data.service,

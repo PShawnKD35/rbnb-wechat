@@ -23,7 +23,7 @@ App({
   globalData: {
     userId : '',
     userInfo : null,
-    url: 'http://localhost:3000/api/v1/'
-    // url: 'https://dragonbnb.herokuapp.com/api/v1/'
+    // url: 'http://localhost:3000/api/v1/'
+    url: 'https://dragonbnb.herokuapp.com/api/v1/'
   }
 })

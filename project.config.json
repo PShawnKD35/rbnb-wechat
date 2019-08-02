@@ -48,7 +48,9 @@
 			"list": []
 		},
 		"miniprogram": {
+
 			"current": 8,
+
 			"list": [
 				{
 					"id": -1,
@@ -94,7 +96,7 @@
 				},
 				{
 					"id": 7,
-					"name": "available service",
+					"name": "pages/availableservice/availableservice",
 					"pathName": "pages/availableservice/availableservice",
 					"query": "",
 					"scene": null

@@ -38,6 +38,7 @@ Page({
       })
     }
   },
+
   getUserInfo: function (e) {
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
@@ -47,21 +48,25 @@ Page({
       userInfo: app.globalData.userInfo
     })
   },
+
   userName(e) {
     this.setData({
       name: e.detail.value
     })
   },
+
   userDescription(e) {
     this.setData({
       description: e.detail.value
     })
   },
+
   userEmail(e) {
     this.setData({
       email: e.detail.value
     })
   },
+
   bindSubmit: function (e) {
     let id = this.data.userId
     let name = this.data.name
@@ -69,7 +74,9 @@ Page({
     let email = this.data.email
     let user = { name: name, description: description, email: email }
     console.log(user)
-    this.setData({ user: user })
+
+    this.setData({user: user})
+
     wx.request({
       url: `${app.globalData.url}users/${id}`,
       method: 'PUT',
